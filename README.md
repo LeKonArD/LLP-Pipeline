@@ -10,25 +10,35 @@ NLP Pipeline for German literary texts (under development)
 ## Tokenization
 * TreeTagger (not yet)
 * SoMaJo (done)
+* Flair (not yet)
+* spaCy (not yet)
 ## Sentence Splitting
 * SpaCy (not yet)
 * SoMaJo (done)
+* Flair (not yet)
 ## Lemmatization
 * TreeTagger (not yet)
 * RNNTagger (not yet)
 * GermaLemma (not yet)
+* SMORLemma (not yet)
+* spaCy (too bad)
 ## Part-of-Speech Tagger
 * TreeTagger (not yet)
 * RNNTagger (not yet)
 * clevertagger (not yet)
+* spacy (not yet)
+* SoMeWeTa (not yet)
+* StanfordNLP (not yet)
 ## Morphological Tagger
 * DEMorphy (not yet)
-## Named Entity Recognition
+## Named Entity Recognition (fine-grained)
 * Flair (not yet)
 * S. Pado NER (not yet)
 ## Dependency Parsing
 * spacy (not yet)
 * parZu (not yet)
+* StanfordNLP (not yet)
+* Parsey McPasresface (not yet)
 ## Semantic Role Labeling
 ## Corefence Resolution
 * CorZu (not yet)
