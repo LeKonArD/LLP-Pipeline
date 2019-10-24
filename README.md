@@ -2,20 +2,20 @@
 NLP Pipeline for literary texts (under development)
 ## Structure
 ### Paragraphs
-* <span style="color:red">TEI Parser</span>
-* <span style="color:blue">Rule based</span>
+* TEI Parser (not yet)
+* Rule based (done)
 ### Chapters
-* TEI Parser
-* <font color="green">Rule based</font>
+* TEI Parser (not yet)
+* Rule based (done)
 ## Tokenization
-* TreeTagger
-* SoMaJo
+* TreeTagger (not yet)
+* SoMaJo (done)
 ## Sentence Splitting
-* SpaCy
+* SpaCy (done)
 ## Lemmatization
-* TreeTagger
+* TreeTagger (not yet)
 ## Part-of-Speech Tagger
-* TreeTagger
+* TreeTagger (not yet)
 ## Morphological Tagger
 ## Named Entity Recognition
 ## Dependency Parsing
