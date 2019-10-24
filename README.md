@@ -40,6 +40,7 @@ NLP Pipeline for German literary texts (under development)
 * StanfordNLP (not yet)
 * Parsey McPasresface (not yet)
 ## Semantic Role Labeling
+* mateplus (not yet)
 ## Corefence Resolution
 * CorZu (not yet)
 # Evaluation
