@@ -2,7 +2,11 @@
 NLP Pipeline for literary texts (under development)
 ## Structure
 ### Paragraphs
+* TEI Parser
+* Rulebased Splitting
 ### Chapters
+* TEI Parser
+* Rule based Splitting
 ## Tokenization
 * TreeTagger
 * SoMaJo
