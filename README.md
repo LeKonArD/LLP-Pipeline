@@ -2,8 +2,8 @@
 NLP Pipeline for literary texts (under development)
 ## Structure
 ### Paragraphs
-* <span style="color:blue">EI Parser</span>
-* <span style="color:blue">ule based</span>
+* <span style="color:red">TEI Parser</span>
+* <span style="color:blue">Rule based</span>
 ### Chapters
 * TEI Parser
 * <font color="green">Rule based</font>
