@@ -3,10 +3,10 @@ NLP Pipeline for literary texts (under development)
 ## Structure
 ### Paragraphs
 * TEI Parser
-* Rulebased Splitting
+* Rule based
 ### Chapters
 * TEI Parser
-* Rule based Splitting
+* Rule based
 ## Tokenization
 * TreeTagger
 * SoMaJo
