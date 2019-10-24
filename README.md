@@ -2,11 +2,11 @@
 NLP Pipeline for literary texts (under development)
 ## Structure
 ### Paragraphs
-* TEI Parser
-* Rule based
+* <font color="red">TEI Parser</font>
+* <font color="green">Rule based</font>
 ### Chapters
 * TEI Parser
-* Rule based
+* <font color="green">Rule based</font>
 ## Tokenization
 * TreeTagger
 * SoMaJo
