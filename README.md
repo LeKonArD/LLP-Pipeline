@@ -21,7 +21,7 @@ NLP Pipeline for German literary texts (under development)
 ## Lemmatization
 * TreeTagger (done)
 * RNNTagger (not yet)
-* GermaLemma (not yet)
+* GermaLemma (done)
 * SMORLemma (not yet)
 * spaCy (too bad)
 ## Part-of-Speech Tagger
