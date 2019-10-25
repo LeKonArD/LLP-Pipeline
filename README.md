@@ -17,7 +17,7 @@ NLP Pipeline for German literary texts (under development)
 ## Sentence Splitting
 * SpaCy (done)
 * SoMaJo (done)
-* Flair (not yet)
+* Flair (not yet, siehe Tokenizer)
 ## Lemmatization
 * TreeTagger (done)
 * RNNTagger (not yet)
