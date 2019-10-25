@@ -29,7 +29,7 @@ NLP Pipeline for German literary texts (under development)
 * RNNTagger (not yet)
 * clevertagger (not yet)
 * spacy (done)
-* SoMeWeTa (not yet)
+* SoMeWeTa (done, get model: <a href="https://github.com/tsproisl/SoMeWeTa#model-files">link</a>)
 * StanfordNLP (not yet)
 ## Morphological Tagger
 * DEMorphy (not yet)
