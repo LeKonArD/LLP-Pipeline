@@ -11,7 +11,7 @@ NLP Pipeline for German literary texts (under development)
 * TreeTagger (done)
 * SoMaJo (done)
 * Flair (==segtok==nicht geeignet, not yet)
-* spaCy (not yet)
+* spaCy (done, + remove linebreaks)
 ## Chunking
 * spaCy (not yet)
 ## Sentence Splitting
