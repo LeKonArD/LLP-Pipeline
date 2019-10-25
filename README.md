@@ -19,7 +19,7 @@ NLP Pipeline for German literary texts (under development)
 * SoMaJo (done)
 * Flair (not yet)
 ## Lemmatization
-* TreeTagger (not yet)
+* TreeTagger (done)
 * RNNTagger (not yet)
 * GermaLemma (not yet)
 * SMORLemma (not yet)
