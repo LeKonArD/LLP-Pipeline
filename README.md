@@ -28,7 +28,7 @@ NLP Pipeline for German literary texts (under development)
 * TreeTagger (done)
 * RNNTagger (not yet)
 * clevertagger (not yet)
-* spacy (not yet)
+* spacy (done)
 * SoMeWeTa (not yet)
 * StanfordNLP (not yet)
 ## Morphological Tagger
