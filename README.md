@@ -15,7 +15,7 @@ NLP Pipeline for German literary texts (under development)
 ## Chunking
 * spaCy (done)
 ## Sentence Splitting
-* SpaCy (not yet)
+* SpaCy (done)
 * SoMaJo (done)
 * Flair (not yet)
 ## Lemmatization
