@@ -10,7 +10,7 @@ NLP Pipeline for German literary texts (under development)
 ## Tokenization
 * TreeTagger (done)
 * SoMaJo (done)
-* Flair (== segtok, not yet)
+* Flair (==segtok==nicht geeignet, not yet)
 * spaCy (not yet)
 ## Chunking
 * spaCy (not yet)
