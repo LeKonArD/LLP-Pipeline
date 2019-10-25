@@ -47,3 +47,13 @@ NLP Pipeline for German literary texts (under development)
 * CorZu (not yet)
 # Evaluation
 # Analysis Tools
+# Requirements
+TreeTagger <br>
+python >= 3.6
+* spacy
+* treetaggerwrapper
+* pandas
+* SoMeWeTa
+* SoMaJo
+* germalemma
+* flair
