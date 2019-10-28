@@ -32,7 +32,7 @@ NLP Pipeline for German literary texts (under development)
 * SoMeWeTa (done, get model: <a href="https://github.com/tsproisl/SoMeWeTa#model-files">link</a>)
 * StanfordNLP (not yet)
 ## Morphological Tagger
-* DEMorphy (not yet, python<3.7, but flair python<=3.7)
+* DEMorphy (not yet, python<3.7, but flair python>=3.7)
 ## Named Entity Recognition (fine-grained)
 * Flair (done)
 * S. Pado NER (not yet)
