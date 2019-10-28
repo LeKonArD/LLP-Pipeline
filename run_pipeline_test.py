@@ -12,6 +12,7 @@ from chunker.sp_nounchunks import nounchunk_sp
 from lemmatizer.tt_lemma import lemma_tt
 from lemmatizer.germalemma import gl_lemma
 from postagger.someweta_pos import smwt_pos
+from NER.nerspacy import sp_ner
 import pandas as pd
 
 
@@ -26,7 +27,7 @@ output = "test_ouput.tsv"
 # one output for every tokenizer will be generated
 # possible choices: "spacy","somajo","treetagger"
 
-tokenizers = ["spacy","somajo","treetagger"]
+tokenizers = ["treetagger"]
 
 
 input_text = open(input, "r").read()
@@ -88,6 +89,9 @@ for tokenizer_choice in tokenizers:
     # chunker
     noun_chunks, noun_chunks_root = nounchunk_sp(tokens)
 
+    # NER
+    spacy_ner = sp_ner(tokens)
+
     # output creation
     table = pd.DataFrame()
     table["chapter"] = chap
@@ -97,6 +101,7 @@ for tokenizer_choice in tokenizers:
     table["token"] = tokens
     table["pos_treetagger"] = pos_treetagger
     table["pos_spacy"] = pos_spacy
+    table["ner_spacy"] = spacy_ner
     #table["pos_someweta"] = pos_someweta
     table["noun_chunk_spacy"] = noun_chunks
     table["noun_chunk_root_spacy"] = noun_chunks_root

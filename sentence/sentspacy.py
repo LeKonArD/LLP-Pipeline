@@ -16,5 +16,4 @@ def sent_sp(tokens):
             sent += 1
 
         sentences.append(sent)
-    print(sentences)
     return sentences
