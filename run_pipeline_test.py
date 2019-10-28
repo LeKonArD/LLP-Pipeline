@@ -10,9 +10,10 @@ from postagger.tt_tagpos import tagpos_tt
 from sentence.sentspacy import sent_sp
 from chunker.sp_nounchunks import nounchunk_sp
 from lemmatizer.tt_lemma import lemma_tt
-from lemmatizer.germalemma import gl_lemma
+#from lemmatizer.germalemma import gl_lemma
 from postagger.someweta_pos import smwt_pos
 from NER.nerspacy import sp_ner
+from NER.nerflair import flair_ner_base
 import pandas as pd
 
 
@@ -91,7 +92,9 @@ for tokenizer_choice in tokenizers:
 
     # NER
     spacy_ner = sp_ner(tokens)
-
+    flair_ner1 = flair_ner_base(tokens)
+    
+    
     # output creation
     table = pd.DataFrame()
     table["chapter"] = chap
@@ -102,6 +105,7 @@ for tokenizer_choice in tokenizers:
     table["pos_treetagger"] = pos_treetagger
     table["pos_spacy"] = pos_spacy
     table["ner_spacy"] = spacy_ner
+    table["ner_flair_base"] = flair_ner1
     #table["pos_someweta"] = pos_someweta
     table["noun_chunk_spacy"] = noun_chunks
     table["noun_chunk_root_spacy"] = noun_chunks_root
