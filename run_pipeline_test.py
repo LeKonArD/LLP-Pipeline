@@ -4,6 +4,7 @@ from tokenizers.tok_alignment import align_token_structure
 from sentence.sentsomajo import sent_smo
 from sentence.sent_alignment import align_token_sentence
 from postagger.spacy_tagpos import tagpos_sp
+from postagger.flair_pos import flair_pos_base, flair_pos_fine
 from tokenizers.toktreetagger import token_tt
 from tokenizers.tokspacy import token_sp
 from postagger.tt_tagpos import tagpos_tt
@@ -13,7 +14,8 @@ from lemmatizer.tt_lemma import lemma_tt
 #from lemmatizer.germalemma import gl_lemma
 from postagger.someweta_pos import smwt_pos
 from NER.nerspacy import sp_ner
-from NER.nerflair import flair_ner_base
+from NER.nerflair import flair_ner_base, flair_ner_fine
+from dependency.depspacy import spdep
 import pandas as pd
 
 
@@ -79,6 +81,8 @@ for tokenizer_choice in tokenizers:
     # pos tagger
     pos_treetagger = tagpos_tt(tokens)
     pos_spacy = tagpos_sp(tokens)
+    pos_flair_basic = flair_pos_base(tokens)
+    #pos_flair_fine = flair_pos_fine(tokens)
     #needs a modelfile and a bit of RAM
     #pos_someweta = smwt_pos(tokens)
 
@@ -90,9 +94,13 @@ for tokenizer_choice in tokenizers:
     # chunker
     noun_chunks, noun_chunks_root = nounchunk_sp(tokens)
 
+    # dependency
+    spdep, sphead = spdep(tokens)
+    
     # NER
     spacy_ner = sp_ner(tokens)
-    flair_ner1 = flair_ner_base(tokens)
+    flair_ner_basic = flair_ner_base(tokens)
+    flair_ner_large = flair_ner_fine(tokens)
     
     
     # output creation
@@ -104,10 +112,15 @@ for tokenizer_choice in tokenizers:
     table["token"] = tokens
     table["pos_treetagger"] = pos_treetagger
     table["pos_spacy"] = pos_spacy
+    table["pos_flair_base"] = pos_flair_basic
+    #table["pos_flair_fine"] = pos_flair_fine
     table["ner_spacy"] = spacy_ner
-    table["ner_flair_base"] = flair_ner1
+    table["ner_flair_base"] = flair_ner_basic
+    table["ner_flair_fine"] = flair_ner_large
     #table["pos_someweta"] = pos_someweta
     table["noun_chunk_spacy"] = noun_chunks
     table["noun_chunk_root_spacy"] = noun_chunks_root
-
+    table["dependency_tag_spacy"] = spdep
+    table["dependency_head_spacy"] = sphead
+    
     table.to_csv(tokenizer_choice+"_"+output, sep="\t")

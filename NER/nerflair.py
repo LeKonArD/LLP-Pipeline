@@ -9,4 +9,12 @@ def flair_ner_base(tokens):
     ner = [x.get_tag("ner").value for x in data]
    
     return ner
- 
+
+def flair_ner_fine(tokens):
+
+    data = Sentence(" ".join(tokens))
+    tagger = SequenceTagger.load('de-ner-germeval')
+    tagger.predict(data)
+    ner = [x.get_tag("ner").value for x in data]
+   
+    return ner

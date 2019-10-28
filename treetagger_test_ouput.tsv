@@ -1,571 +1,571 @@
-	chapter	paragraphs	sentence_spacy	sentence_smo	token	pos_treetagger	pos_spacy	ner_spacy	ner_flair_base	noun_chunk_spacy	noun_chunk_root_spacy	dependency_tag_spacy	dependency_head_spacy
-0	0	0	1	0	Der	ART	DET	0	O	1	0	nk	1
-1	0	0	1	0	Fürst	NN	NOUN	0	O	1	root	sb	2
-2	0	0	1	0	machte	VVFIN	VERB	0	O	0	0	ROOT	2
-3	0	0	1	0	wieder	ADV	ADV	0	O	0	0	mo	2
-4	0	0	1	0	ein	ART	DET	0	O	2	0	nk	6
-5	0	0	1	0	verdrießliches	ADJA	ADJ	MISC	O	2	0	nk	6
-6	0	0	1	0	Gesicht	NN	NOUN	0	O	2	root	oa	2
-7	0	0	1	0	und	KON	CONJ	0	O	0	0	cd	2
-8	0	0	1	0	entfernte	VVFIN	VERB	0	O	0	0	cj	7
-9	0	0	1	0	sich	PRF	PRON	0	O	3	root	oa	8
-10	0	0	1	0	.	$.	PUNCT	0	O	0	0	punct	2
-11	0	0	2	1	Peter	NE	PROPN	PER	S-PER	4	root	sb	27
-12	0	0	2	1	,	$,	PUNCT	0	O	0	0	punct	11
-13	0	0	2	1	der	PRELS	PRON	0	O	5	root	sb	25
-14	0	0	2	1	ihn	PPER	PRON	0	O	0	root	oa	24
-15	0	0	2	1	seit	APPR	ADP	0	O	0	0	mo	24
-16	0	0	2	1	seinem	PPOSAT	DET	0	O	7	0	nk	17
-17	0	0	2	1	Eintreten	NN	NOUN	0	O	7	root	nk	15
-18	0	0	2	1	mit	APPR	ADP	0	O	0	0	mo	24
-19	0	0	2	1	seinen	PPOSAT	DET	0	O	8	0	nk	23
-20	0	0	2	1	vergnügten	ADJA	ADJ	0	O	8	0	nk	23
-21	0	0	2	1	,	$,	PUNCT	0	O	8	0	punct	20
-22	0	0	2	1	freundlichen	ADJA	ADJ	0	O	8	0	cj	20
-23	0	0	2	1	Augen	NN	NOUN	0	O	8	root	nk	18
-24	0	0	2	1	verfolgt	VVPP	VERB	0	O	0	0	oc	25
-25	0	0	2	1	hatte	VAFIN	AUX	0	O	0	0	rc	11
-26	0	0	2	1	,	$,	PUNCT	0	O	0	0	punct	27
-27	0	0	2	1	näherte	VVFIN	VERB	0	O	0	0	ROOT	27
-28	0	0	2	1	sich	PRF	PRON	0	O	9	root	oa	27
-29	0	0	2	1	ihm	PPER	PRON	0	O	0	root	da	27
-30	0	0	2	1	jetzt	ADV	ADV	0	O	0	0	mo	27
-31	0	0	2	1	und	KON	CONJ	0	O	0	0	cd	27
-32	0	0	2	1	ergriff	VVFIN	VERB	0	O	0	0	cj	31
-33	0	0	2	1	seine	PPOSAT	DET	0	O	11	0	nk	34
-34	0	0	2	1	Hand	NN	NOUN	0	O	11	root	oa	32
-35	0	0	2	1	.	$.	PUNCT	0	O	0	0	punct	27
-36	0	0	3	2	Die	ART	DET	0	O	12	0	nk	37
-37	0	0	3	2	Miene	NN	NOUN	0	O	12	root	sb	41
-38	0	0	3	2	des	ART	DET	0	O	0	0	nk	39
-39	0	0	3	2	Fürsten	NN	ADJ	0	O	0	0	ag	37
-40	0	0	3	2	Andree	NE	PROPN	PER	S-PER	13	root	nk	39
-41	0	0	3	2	erhellte	VVFIN	VERB	0	O	0	0	oc	50
-42	0	0	3	2	sich	PRF	PRON	0	O	14	root	oa	41
-43	0	0	3	2	plötzlich	ADJD	ADJ	0	O	0	0	mo	41
-44	0	0	3	2	und	KON	CONJ	0	O	0	0	cd	43
-45	0	0	3	2	mit	APPR	ADP	0	O	0	0	cj	44
-46	0	0	3	2	gutmütigem	ADJA	ADJ	0	O	15	0	nk	49
-47	0	0	3	2	,	$,	PUNCT	0	O	15	0	punct	46
-48	0	0	3	2	herzlichem	ADJA	ADJ	0	O	15	0	cj	46
-49	0	0	3	2	Lächeln	NN	NOUN	0	O	15	root	nk	45
-50	0	0	3	2	rief	VVFIN	VERB	0	O	0	0	ROOT	50
-51	0	0	3	2	er	PPER	PRON	0	O	16	root	sb	50
-52	0	0	3	2	:	$.	PUNCT	0	O	0	0	punct	50
-53	0	0	4	2	»	ADJA	PUNCT	0	O	0	0	punct	54
-54	0	0	4	2	Ach	ITJ	INTJ	MISC	O	0	0	ROOT	54
-55	0	0	4	2	,	$,	PUNCT	0	O	0	0	punct	54
-56	0	0	4	2	wirklich	ADJD	ADJ	0	O	0	0	mo	54
-57	0	0	4	2	!	$.	PUNCT	0	O	0	0	punct	54
-58	0	0	5	3	Bist	VAFIN	AUX	0	O	0	0	ROOT	58
-59	0	0	5	3	du	PPER	PRON	0	O	17	root	sb	58
-60	0	0	5	3	auch	ADV	ADV	0	O	0	0	mo	61
-61	0	0	5	3	in	APPR	ADP	0	O	0	0	mo	58
-62	0	0	5	3	der	ART	DET	0	O	18	0	nk	64
-63	0	0	5	3	großen	ADJA	ADJ	0	O	18	0	nk	64
-64	0	0	5	3	Welt	NN	NOUN	0	O	18	root	nk	61
-65	0	0	5	3	?	$.	PUNCT	0	O	0	0	punct	58
-66	0	0	6	3	«	ADJA	PUNCT	0	O	0	0	ROOT	66
-67	0	0	7	3	»	NN	PUNCT	0	O	0	0	punct	69
-68	0	0	7	3	Ich	PPER	PRON	0	O	19	root	sb	69
-69	0	0	7	3	wußte	VVFIN	VERB	0	O	0	0	ROOT	69
-70	0	0	7	3	,	$,	PUNCT	0	O	0	0	punct	69
-71	0	0	7	3	daß	KOUS	SCONJ	0	O	0	0	cp	75
-72	0	0	7	3	Sie	PPER	PRON	0	O	20	root	sb	75
-73	0	0	7	3	hier	ADV	ADV	0	O	0	0	mo	74
-74	0	0	7	3	sein	VAINF	AUX	0	O	0	0	oc	75
-75	0	0	7	3	würden	VAFIN	AUX	0	O	0	0	oc	69
-76	0	0	7	3	!	$.	PUNCT	0	O	0	0	punct	69
-77	0	0	8	4	Ich	PPER	PRON	0	O	21	root	sb	78
-78	0	0	8	4	werde	VAFIN	AUX	0	O	0	0	ROOT	78
-79	0	0	8	4	nächstens	ADV	ADV	PER	O	0	0	mo	82
-80	0	0	8	4	bei	APPR	ADP	0	O	0	0	mo	82
-81	0	0	8	4	Ihnen	PPER	PRON	0	O	22	root	nk	80
-82	0	0	8	4	speisen	VVINF	VERB	0	O	0	0	oc	78
-83	0	0	8	4	,	$,	PUNCT	0	O	0	0	punct	84
-84	0	0	8	4	darf	VMFIN	VERB	0	O	0	0	cj	78
-85	0	0	8	4	ich	PPER	PRON	0	O	23	root	sb	84
-86	0	0	8	4	?	$.	PUNCT	0	O	0	0	punct	84
-87	0	0	9	4	«	ADJD	PUNCT	0	O	0	0	punct	88
-88	0	0	9	4	fügte	VVFIN	VERB	0	O	0	0	ROOT	88
-89	0	0	9	4	er	PPER	PRON	0	O	24	root	sb	88
-90	0	0	9	4	leise	ADJD	ADJ	0	O	0	0	mo	88
-91	0	0	9	4	hinzu	PTKVZ	PART	0	O	0	0	svp	88
-92	0	0	9	4	.	$.	PUNCT	0	O	0	0	punct	88
-93	0	0	10	4	»	ADJA	PUNCT	0	O	0	0	ROOT	93
-94	0	0	11	5	Nein	NN	PART	PER	O	0	0	dm	97
-95	0	0	11	5	,	$,	PUNCT	0	O	0	0	punct	97
-96	0	0	11	5	du	PPER	PRON	0	O	0	0	pnc	97
-97	0	0	11	5	darfst	VMFIN	PROPN	PER	O	0	0	oc	101
-98	0	0	11	5	nicht	PTKNEG	PART	0	O	0	0	ng	97
-99	0	0	11	5	«	ADJD	PUNCT	0	O	0	0	punct	97
-100	0	0	11	5	,	$,	PUNCT	0	O	0	0	punct	101
-101	0	0	11	5	sagte	VVFIN	VERB	0	O	0	0	ROOT	101
-102	0	0	11	5	Andree	NE	PROPN	PER	S-PER	25	root	sb	101
-103	0	0	11	5	lachend	ADJD	ADJ	0	O	0	0	mo	101
-104	0	0	11	5	,	$,	PUNCT	0	O	0	0	punct	101
-105	0	0	11	5	indem	KOUS	SCONJ	0	O	0	0	cp	116
-106	0	0	11	5	er	PPER	PRON	0	O	26	root	sb	116
-107	0	0	11	5	Peter	NE	PROPN	PER	S-PER	0	root	oa	116
-108	0	0	11	5	durch	APPR	ADP	0	O	0	0	mo	116
-109	0	0	11	5	einen	ART	DET	0	O	28	0	nk	110
-110	0	0	11	5	Händedruck	NN	NOUN	0	O	28	root	nk	108
-111	0	0	11	5	die	ART	DET	0	O	0	0	nk	112
-112	0	0	11	5	Überflüssigkeit	NN	NOUN	0	O	0	root	oa	116
-113	0	0	11	5	seiner	PPOSAT	DET	0	O	0	0	nk	114
-114	0	0	11	5	Frage	NN	NOUN	0	O	0	root	ag	112
-115	0	0	11	5	begreiflich	ADJD	ADJ	0	O	0	0	mo	116
-116	0	0	11	5	machte	VVFIN	VERB	0	O	0	0	mo	101
-117	0	0	11	5	.	$.	PUNCT	0	O	0	0	punct	101
-118	0	0	12	6	Er	PPER	PRON	0	O	31	root	sb	119
-119	0	0	12	6	wollte	VMFIN	VERB	0	O	0	0	ROOT	119
-120	0	0	12	6	noch	ADV	ADV	0	O	32	0	mo	121
-121	0	0	12	6	etwas	PIS	PRON	0	O	32	root	oa	122
-122	0	0	12	6	sagen	VVINF	VERB	0	O	0	0	oc	119
-123	0	0	12	6	,	$,	PUNCT	0	O	0	0	punct	122
-124	0	0	12	6	als	KOUS	CONJ	0	O	0	0	cp	132
-125	0	0	12	6	der	ART	DET	0	O	33	0	nk	126
-126	0	0	12	6	Fürst	NN	NOUN	0	O	33	root	sb	132
-127	0	0	12	6	Wassil	NE	PROPN	PER	S-PER	33	0	nk	126
-128	0	0	12	6	und	KON	CONJ	0	O	0	0	cd	127
-129	0	0	12	6	seine	PPOSAT	DET	0	O	34	0	nk	130
-130	0	0	12	6	Tochter	NN	NOUN	0	O	34	root	cj	128
-131	0	0	12	6	sich	PRF	PRON	0	O	0	root	oa	132
-132	0	0	12	6	erhoben	VVPP	VERB	0	O	0	0	mo	122
-133	0	0	12	6	,	$,	PUNCT	0	O	0	0	punct	119
-134	0	0	12	6	und	KON	CONJ	0	O	0	0	cd	119
-135	0	0	12	6	die	ART	DET	0	O	36	0	nk	136
-136	0	0	12	6	Umstehenden	NN	NOUN	0	O	36	root	oa	140
-137	0	0	12	6	auf	APPR	ADP	0	O	0	0	mo	140
-138	0	0	12	6	die	ART	DET	0	O	37	0	nk	139
-139	0	0	12	6	Seite	NN	NOUN	0	O	37	root	nk	137
-140	0	0	12	6	traten	VVFIN	VERB	0	O	0	0	cj	134
-141	0	0	12	6	,	$,	PUNCT	0	O	0	0	punct	140
-142	0	0	12	6	um	KOUI	SCONJ	0	O	0	0	cp	146
-143	0	0	12	6	ihnen	PPER	PRON	0	O	38	root	da	146
-144	0	0	12	6	Raum	NN	NOUN	0	O	0	root	oa	146
-145	0	0	12	6	zu	PTKZU	PART	0	O	0	0	pm	146
-146	0	0	12	6	geben	VVINF	VERB	0	O	0	0	mo	140
-147	0	0	12	6	.	$.	PUNCT	0	O	0	0	punct	119
-148	0	1	13	6	»	ADJA	PUNCT	0	O	0	0	punct	149
-149	0	1	13	7	Entschuldigen	NN	VERB	0	O	0	0	oc	156
-150	0	1	13	7	Sie	PPER	PRON	0	O	40	root	sb	149
-151	0	1	13	7	,	$,	PUNCT	0	O	0	0	punct	150
-152	0	1	13	7	verehrter	ADJA	ADJ	0	O	41	0	nk	153
-153	0	1	13	7	Graf	NN	NOUN	0	O	41	root	app	150
-154	0	1	13	7	«	ADJD	PUNCT	0	O	0	0	punct	149
-155	0	1	13	7	,	$,	PUNCT	0	O	0	0	punct	156
-156	0	1	13	7	sagte	VVFIN	VERB	0	O	0	0	ROOT	156
-157	0	1	13	7	der	ART	DET	0	O	42	0	nk	158
-158	0	1	13	7	Fürst	NN	NOUN	0	O	42	root	sb	156
-159	0	1	13	7	,	$,	PUNCT	0	O	0	0	punct	156
-160	0	1	13	7	»	NN	PUNCT	0	O	0	0	punct	167
-161	0	1	13	7	diese	PDAT	DET	0	O	43	0	nk	163
-162	0	1	13	7	ungelegene	ADJA	ADJ	0	O	43	0	nk	163
-163	0	1	13	7	Festlichkeit	NN	NOUN	0	O	43	root	sb	167
-164	0	1	13	7	beim	APPRART	ADP	0	O	0	0	mnr	163
-165	0	1	13	7	englischen	ADJA	ADJ	MISC	O	44	0	nk	166
-166	0	1	13	7	Gesandten	NN	NOUN	0	O	44	root	nk	164
-167	0	1	13	7	beraubt	VVFIN	VERB	0	O	0	0	oc	156
-168	0	1	13	7	uns	PPER	PRON	0	O	45	root	da	167
-169	0	1	13	7	eines	ART	DET	0	O	0	0	nk	170
-170	0	1	13	7	Vergnügens	NN	NOUN	0	O	0	root	og	167
-171	0	1	13	7	und	KON	CONJ	0	O	0	0	cd	167
-172	0	1	13	7	nötigt	VVFIN	VERB	0	O	0	0	cj	171
-173	0	1	13	7	uns	PPER	PRON	0	O	47	root	oa	172
-174	0	1	13	7	,	$,	PUNCT	0	O	0	0	punct	172
-175	0	1	13	7	Sie	PPER	PRON	0	O	48	root	oa	177
-176	0	1	13	7	zu	PTKZU	PART	0	O	0	0	pm	177
-177	0	1	13	7	unterbrechen	VVINF	VERB	0	O	0	0	oc	172
-178	0	1	13	7	.	$.	PUNCT	0	O	0	0	punct	156
-179	0	1	14	8	Ich	PPER	PRON	0	O	49	root	sb	180
-180	0	1	14	8	bedaure	VVFIN	VERB	0	O	0	0	oc	183
-181	0	1	14	8	sehr	ADV	ADV	0	O	0	0	mo	180
-182	0	1	14	8	,	$,	PUNCT	0	O	0	0	punct	183
-183	0	1	14	8	teuerste	ADJA	ADJ	0	O	0	0	ROOT	183
-184	0	1	14	8	Anna	NE	PROPN	PER	B-PER	50	0	pnc	185
-185	0	1	14	8	Pawlowna	NE	PROPN	0	E-PER	50	root	sb	183
-186	0	1	14	8	,	$,	PUNCT	0	O	0	0	punct	183
-187	0	1	14	8	Ihre	PPOSAT	DET	0	O	51	0	nk	189
-188	0	1	14	8	reizende	ADJA	ADJ	0	O	51	0	nk	189
-189	0	1	14	8	Soiree	NN	PROPN	LOC	O	51	root	oa	190
-190	0	1	14	8	verlassen	VVINF	VERB	0	O	0	0	oc	192
-191	0	1	14	8	zu	PTKZU	PART	0	O	0	0	pm	192
-192	0	1	14	8	müssen	VMINF	VERB	0	O	0	0	oc	183
-193	0	1	14	8	.	$.	PUNCT	0	O	0	0	punct	183
-194	0	1	15	9	«	NN	PUNCT	0	O	0	0	ROOT	194
-195	0	1	16	9	Seine	PPOSAT	DET	0	O	52	0	nk	196
-196	0	1	16	9	Tochter	NN	NOUN	0	O	52	root	sb	198
-197	0	1	16	9	Helene	NE	PROPN	PER	S-PER	52	0	nk	196
-198	0	1	16	9	bahnte	VVFIN	VERB	0	O	0	0	ROOT	198
-199	0	1	16	9	sich	PRF	PRON	0	O	53	root	oa	198
-200	0	1	16	9	einen	ART	DET	0	O	0	0	nk	201
-201	0	1	16	9	Weg	NN	NOUN	0	O	0	root	oa	198
-202	0	1	16	9	durch	APPR	ADP	0	O	0	0	mnr	201
-203	0	1	16	9	die	ART	DET	0	O	55	0	nk	204
-204	0	1	16	9	Stühle	NN	NOUN	0	O	55	root	nk	202
-205	0	1	16	9	,	$,	PUNCT	0	O	0	0	punct	198
-206	0	1	16	9	indem	KOUS	SCONJ	0	O	0	0	cp	213
-207	0	1	16	9	sie	PPER	PRON	0	O	56	root	sb	213
-208	0	1	16	9	ihr	PPOSAT	DET	0	O	0	0	nk	209
-209	0	1	16	9	Kleid	NN	NOUN	0	O	0	root	oa	213
-210	0	1	16	9	mit	APPR	ADP	0	O	0	0	mo	213
-211	0	1	16	9	einer	ART	DET	0	O	58	0	nk	212
-212	0	1	16	9	Hand	NN	NOUN	0	O	58	root	nk	210
-213	0	1	16	9	zurückhielt	VVFIN	VERB	0	O	0	0	mo	198
-214	0	1	16	9	.	$.	PUNCT	0	O	0	0	punct	198
-215	0	1	17	10	Peter	NE	PROPN	PER	S-PER	59	root	sb	216
-216	0	1	17	10	betrachtete	VVFIN	VERB	0	O	0	0	ROOT	216
-217	0	1	17	10	diese	PDAT	DET	0	O	60	0	nk	219
-218	0	1	17	10	blendende	ADJA	ADJ	0	O	60	0	nk	219
-219	0	1	17	10	Schönheit	NN	NOUN	0	O	60	root	oa	216
-220	0	1	17	10	mit	APPR	ADP	0	O	0	0	mo	216
-221	0	1	17	10	einer	ART	DET	0	O	61	0	nk	222
-222	0	1	17	10	Mischung	NN	NOUN	0	O	61	root	nk	220
-223	0	1	17	10	von	APPR	ADP	0	O	0	0	pg	222
-224	0	1	17	10	Entzücken	NN	NOUN	0	O	62	root	nk	223
-225	0	1	17	10	und	KON	CONJ	0	O	0	0	cd	224
-226	0	1	17	10	Schrecken	NN	NOUN	0	O	63	root	cj	225
-227	0	1	17	10	.	$.	PUNCT	0	O	0	0	punct	216
-228	0	1	18	10	»	NN	PUNCT	0	O	0	0	punct	230
-229	0	1	18	11	Sie	PPER	PRON	0	O	64	root	sb	230
-230	0	1	18	11	ist	VAFIN	AUX	0	O	0	0	oc	235
-231	0	1	18	11	sehr	ADV	ADV	0	O	0	0	mo	232
-232	0	1	18	11	schön	ADJD	ADJ	0	O	0	0	pd	230
-233	0	1	18	11	!	$.	PUNCT	0	O	0	0	punct	230
-234	0	1	18	11	«	ADJD	PUNCT	0	O	0	0	punct	235
-235	0	1	18	11	sagte	VVFIN	VERB	0	O	0	0	ROOT	235
-236	0	1	18	11	der	ART	DET	0	O	65	0	nk	237
-237	0	1	18	11	Fürst	NN	NOUN	0	O	65	root	sb	235
-238	0	1	18	11	Andree	NE	PROPN	PER	S-PER	65	0	nk	237
-239	0	1	18	11	.	$.	PUNCT	0	O	0	0	punct	235
-240	0	1	19	11	»	ADJA	PUNCT	0	O	0	0	ROOT	240
-241	0	1	20	12	Ja	NN	PART	0	O	0	0	mo	246
-242	0	1	20	12	,	$,	PUNCT	0	O	0	0	punct	243
-243	0	1	20	12	sehr	ADV	ADV	0	O	0	0	mo	246
-244	0	1	20	12	«	ADJD	PUNCT	0	O	0	0	punct	243
-245	0	1	20	12	,	$,	PUNCT	0	O	0	0	punct	246
-246	0	1	20	12	erwiderte	VVFIN	VERB	0	O	0	0	ROOT	246
-247	0	1	20	12	Peter	NE	PROPN	PER	S-PER	66	root	sb	246
-248	0	1	20	12	.	$.	PUNCT	0	O	0	0	punct	246
-249	0	1	21	13	Der	ART	DET	0	O	67	0	nk	250
-250	0	1	21	13	Fürst	NN	NOUN	0	O	67	root	sb	252
-251	0	1	21	13	Wassil	NE	PROPN	PER	S-PER	67	0	nk	250
-252	0	1	21	13	drückte	VVFIN	VERB	0	O	0	0	ROOT	252
-253	0	1	21	13	ihm	PPER	PRON	0	O	68	root	da	252
-254	0	1	21	13	im	APPRART	ADP	0	O	0	0	mo	252
-255	0	1	21	13	Vorübergehen	NN	NOUN	0	O	69	root	nk	254
-256	0	1	21	13	die	ART	DET	0	O	0	0	nk	257
-257	0	1	21	13	Hand	NN	NOUN	0	O	0	root	oa	252
-258	0	1	21	13	.	$.	PUNCT	0	O	0	0	punct	252
-259	0	1	22	13	»	ADJA	PUNCT	0	O	0	0	punct	260
-260	0	1	22	14	Vollenden	NN	VERB	0	O	0	0	oc	268
-261	0	1	22	14	Sie	PPER	PRON	0	O	71	root	sb	260
-262	0	1	22	14	die	ART	DET	0	O	0	0	nk	263
-263	0	1	22	14	Erziehung	NN	NOUN	0	O	0	root	oa	260
-264	0	1	22	14	dieses	PDAT	DET	0	O	0	0	nk	265
-265	0	1	22	14	Bären	NN	NOUN	0	O	0	root	ag	263
-266	0	1	22	14	«	ADJD	PUNCT	0	O	0	0	punct	260
-267	0	1	22	14	,	$,	PUNCT	0	O	0	0	punct	268
-268	0	1	22	14	sagte	VVFIN	VERB	0	O	0	0	ROOT	268
-269	0	1	22	14	er	PPER	PRON	0	O	74	root	sb	268
-270	0	1	22	14	zu	APPR	ADP	0	O	0	0	mo	268
-271	0	1	22	14	der	ART	DET	0	O	75	0	nk	272
-272	0	1	22	14	Hofdame	NN	NOUN	MISC	O	75	root	nk	270
-273	0	1	22	14	.	$.	PUNCT	0	O	0	0	punct	268
-274	0	1	23	14	»	NN	PUNCT	0	O	0	0	punct	278
-275	0	1	23	15	Seit	APPR	ADP	0	O	0	0	mo	278
-276	0	1	23	15	elf	CARD	NUM	0	O	76	0	nk	277
-277	0	1	23	15	Monaten	NN	NOUN	MISC	O	76	root	nk	275
-278	0	1	23	15	wohnt	VVFIN	VERB	0	O	0	0	ROOT	278
-279	0	1	23	15	er	PPER	PRON	0	O	77	root	sb	278
-280	0	1	23	15	bei	APPR	ADP	0	O	0	0	mo	278
-281	0	1	23	15	mir	PPER	PRON	0	O	78	root	nk	280
-282	0	1	23	15	und	KON	CONJ	0	O	0	0	cd	278
-283	0	1	23	15	dies	PDS	PRON	0	O	79	root	sb	284
-284	0	1	23	15	ist	VAFIN	AUX	0	O	0	0	cj	282
-285	0	1	23	15	das	PDS	PRON	0	O	80	root	nk	286
-286	0	1	23	15	erstemal	ADV	NOUN	0	O	0	root	pd	284
-287	0	1	23	15	,	$,	PUNCT	0	O	0	0	punct	284
-288	0	1	23	15	daß	KOUS	SCONJ	0	O	0	0	cp	293
-289	0	1	23	15	ich	PPER	PRON	0	O	82	root	sb	293
-290	0	1	23	15	ihn	PPER	PRON	0	O	0	root	oa	293
-291	0	1	23	15	in	APPR	ADP	0	O	0	0	mo	293
-292	0	1	23	15	Gesellschaft	NN	NOUN	0	O	84	root	nk	291
-293	0	1	23	15	sehe	VVFIN	VERB	0	O	0	0	re	283
-294	0	1	23	15	.	$.	PUNCT	0	O	0	0	punct	278
-295	0	1	24	16	Nichts	PIS	PRON	0	O	85	root	sb	296
-296	0	1	24	16	bildet	VVFIN	VERB	0	O	0	0	ROOT	296
-297	0	1	24	16	einen	ART	DET	0	O	86	0	nk	299
-298	0	1	24	16	jungen	ADJA	ADJ	0	O	86	0	nk	299
-299	0	1	24	16	Mann	NN	NOUN	0	O	86	root	oa	296
-300	0	1	24	16	so	ADV	ADV	0	O	0	0	mo	296
-301	0	1	24	16	wie	KOKOM	CONJ	0	O	0	0	cm	303
-302	0	1	24	16	die	ART	DET	0	O	0	0	nk	303
-303	0	1	24	16	Gesellschaft	NN	NOUN	ORG	O	0	0	cc	300
-304	0	1	24	16	geistreicher	ADJA	ADJ	0	O	87	0	nk	305
-305	0	1	24	16	Damen	NN	NOUN	0	O	87	root	ag	303
-306	0	1	24	16	.	$.	PUNCT	0	O	0	0	punct	296
-307	0	1	25	17	«	NN	PUNCT	0	O	0	0	ROOT	307
-308	1	2	26	17	Die	ART	DET	0	O	88	0	nk	309
-309	1	2	26	17	Hofdame	NN	NOUN	0	O	88	root	sb	310
-310	1	2	26	17	versprach	VVFIN	VERB	0	O	0	0	ROOT	310
-311	1	2	26	17	lächelnd	ADJD	ADJ	0	O	0	0	mo	310
-312	1	2	26	17	,	$,	PUNCT	0	O	0	0	punct	310
-313	1	2	26	17	sich	PRF	PRON	0	O	89	root	oa	317
-314	1	2	26	17	mit	APPR	ADP	0	O	0	0	mo	317
-315	1	2	26	17	Peter	NE	PROPN	PER	S-PER	90	root	nk	314
-316	1	2	26	17	zu	PTKZU	PART	0	O	0	0	pm	317
-317	1	2	26	17	beschäftigen	VVINF	VERB	0	O	0	0	oc	310
-318	1	2	26	17	,	$,	PUNCT	0	O	0	0	punct	317
-319	1	2	26	17	welcher	PWS	DET	0	O	0	0	sb	333
-320	1	2	26	17	,	$,	PUNCT	0	O	0	0	punct	319
-321	1	2	26	17	wie	KOUS	ADV	0	O	0	0	mo	323
-322	1	2	26	17	sie	PPER	PRON	0	O	91	root	sb	323
-323	1	2	26	17	wußte	VVFIN	VERB	0	O	0	0	cc	319
-324	1	2	26	17	,	$,	PUNCT	0	O	0	0	punct	333
-325	1	2	26	17	durch	APPR	ADP	0	O	0	0	mo	332
-326	1	2	26	17	seinen	PPOSAT	DET	0	O	92	0	nk	327
-327	1	2	26	17	Vater	NN	NOUN	0	O	92	root	nk	325
-328	1	2	26	17	mit	APPR	ADP	0	O	0	0	mo	332
-329	1	2	26	17	dem	ART	DET	0	O	0	0	nk	330
-330	1	2	26	17	Fürsten	NN	ADJ	0	O	0	0	nk	328
-331	1	2	26	17	Wassil	NE	NOUN	PER	S-PER	93	root	nk	330
-332	1	2	26	17	verwandt	VVPP	VERB	0	O	0	0	pd	333
-333	1	2	26	17	war	VAFIN	AUX	0	O	0	0	rc	315
-334	1	2	26	17	.	$.	PUNCT	0	O	0	0	punct	310
-335	1	2	27	18	Die	ART	DET	0	O	94	0	nk	337
-336	1	2	27	18	alte	ADJA	ADJ	0	O	94	0	nk	337
-337	1	2	27	18	Dame	NN	NOUN	0	O	94	root	sb	345
-338	1	2	27	18	,	$,	PUNCT	0	O	0	0	punct	337
-339	1	2	27	18	welche	PRELS	PRON	0	O	95	root	sb	343
-340	1	2	27	18	neben	APPR	ADP	0	O	0	0	mo	343
-341	1	2	27	18	der	ART	DET	0	O	96	0	nk	342
-342	1	2	27	18	Tante	NN	NOUN	0	O	96	root	nk	340
-343	1	2	27	18	saß	VVFIN	VERB	0	O	0	0	rc	337
-344	1	2	27	18	,	$,	PUNCT	0	O	0	0	punct	345
-345	1	2	27	18	erhob	VVFIN	VERB	0	O	0	0	ROOT	345
-346	1	2	27	18	sich	PRF	PRON	0	O	97	root	oa	345
-347	1	2	27	18	plötzlich	ADJD	ADJ	0	O	0	0	mo	345
-348	1	2	27	18	und	KON	CONJ	0	O	0	0	cd	345
-349	1	2	27	18	holte	VVFIN	VERB	0	O	0	0	cj	348
-350	1	2	27	18	den	ART	DET	0	O	98	0	nk	352
-351	1	2	27	18	Fürsten	NN	ADJ	0	O	98	0	nk	352
-352	1	2	27	18	Wassil	NE	NOUN	PER	S-PER	98	root	oa	349
-353	1	2	27	18	im	APPRART	ADP	0	O	0	0	mo	349
-354	1	2	27	18	Vorzimmer	NN	NOUN	0	O	99	root	nk	353
-355	1	2	27	18	ein	PTKVZ	PART	0	O	0	0	svp	349
-356	1	2	27	18	.	$.	PUNCT	0	O	0	0	punct	345
-357	1	2	28	18	»	NN	PUNCT	0	O	0	0	punct	363
-358	1	2	28	19	Was	PIS	PRON	0	O	100	root	oa	363
-359	1	2	28	19	haben	VAFIN	AUX	0	O	0	0	ROOT	359
-360	1	2	28	19	Sie	PPER	PRON	0	O	101	root	sb	359
-361	1	2	28	19	mir	PPER	PRON	0	O	0	root	da	363
-362	1	2	28	19	zu	PTKZU	PART	0	O	0	0	pm	363
-363	1	2	28	19	sagen	VVINF	VERB	0	O	0	0	oc	359
-364	1	2	28	19	,	$,	PUNCT	0	O	0	0	punct	363
-365	1	2	28	19	Fürst	NN	NOUN	0	S-PER	103	root	cj	359
-366	1	2	28	19	,	$,	PUNCT	0	O	0	0	punct	365
-367	1	2	28	19	wegen	APPR	ADP	0	O	0	0	mo	359
-368	1	2	28	19	meines	PPOSAT	DET	0	O	104	0	nk	369
-369	1	2	28	19	Boris	NE	PROPN	0	S-PER	104	root	nk	367
-370	1	2	28	19	?	$.	PUNCT	0	O	0	0	punct	359
-371	1	2	29	20	Ich	PPER	PRON	0	O	105	root	sb	372
-372	1	2	29	20	kann	VMFIN	VERB	0	O	0	0	ROOT	372
-373	1	2	29	20	nicht	PTKNEG	PART	0	O	0	0	ng	372
-374	1	2	29	20	länger	ADJD	ADJ	0	O	0	0	mo	372
-375	1	2	29	20	in	APPR	ADP	0	O	0	0	mo	377
-376	1	2	29	20	Petersburg	NE	PROPN	LOC	S-LOC	106	root	nk	375
-377	1	2	29	20	bleiben	VVINF	VERB	0	O	0	0	oc	372
-378	1	2	29	20	.	$.	PUNCT	0	O	0	0	punct	372
-379	1	2	30	21	Bitte	PTKANT	PART	0	O	0	0	mo	381
-380	1	2	30	21	,	$,	PUNCT	0	O	0	0	punct	381
-381	1	2	30	21	sprechen	VVFIN	VERB	0	O	0	0	ROOT	381
-382	1	2	30	21	Sie	PPER	PRON	0	O	107	root	sb	381
-383	1	2	30	21	,	$,	PUNCT	0	O	0	0	punct	381
-384	1	2	30	21	was	PRELS	PRON	0	O	108	root	oa	389
-385	1	2	30	21	ich	PPER	PRON	0	O	0	root	sb	390
-386	1	2	30	21	meinem	PPOSAT	DET	0	O	0	0	nk	388
-387	1	2	30	21	armen	ADJA	ADJ	0	O	0	0	nk	388
-388	1	2	30	21	Sohne	NN	NOUN	0	O	0	root	da	389
-389	1	2	30	21	sagen	VVINF	VERB	0	O	0	0	oc	390
-390	1	2	30	21	kann	VMFIN	VERB	0	O	0	0	oc	381
-391	1	2	30	21	.	$.	PUNCT	0	O	0	0	punct	381
-392	1	2	31	22	«	NN	PUNCT	0	O	0	0	ROOT	392
-393	1	2	32	22	Ungeachtet	APPR	ADP	0	O	0	0	mo	407
-394	1	2	32	22	der	ART	DET	0	O	111	0	nk	396
-395	1	2	32	22	sichtlichen	ADJA	ADJ	0	O	111	0	nk	396
-396	1	2	32	22	Verdrießlichkeit	NN	NOUN	0	O	111	root	nk	393
-397	1	2	32	22	und	KON	CONJ	0	O	0	0	cd	396
-398	1	2	32	22	Unhöflichkeit	NN	NOUN	0	O	112	root	cj	397
-399	1	2	32	22	,	$,	PUNCT	0	O	0	0	punct	396
-400	1	2	32	22	mit	APPR	ADP	0	O	0	0	mo	405
-401	1	2	32	22	der	PRELS	PRON	0	O	113	root	nk	400
-402	1	2	32	22	der	ART	DET	0	O	0	0	nk	403
-403	1	2	32	22	Fürst	NN	NOUN	0	O	0	root	sb	405
-404	1	2	32	22	sie	PPER	PRON	0	O	0	root	oa	405
-405	1	2	32	22	anhörte	VVFIN	VERB	0	O	0	0	rc	396
-406	1	2	32	22	,	$,	PUNCT	0	O	0	0	punct	407
-407	1	2	32	22	lächelte	VVFIN	VERB	0	O	0	0	ROOT	407
-408	1	2	32	22	sie	PPER	PRON	0	O	116	root	sb	407
-409	1	2	32	22	ihm	PPER	PRON	0	O	0	root	da	407
-410	1	2	32	22	zu	PTKVZ	PART	0	O	0	0	svp	407
-411	1	2	32	22	und	KON	CONJ	0	O	0	0	cd	407
-412	1	2	32	22	hielt	VVFIN	VERB	0	O	0	0	cj	411
-413	1	2	32	22	ihn	PPER	PRON	0	O	118	root	oa	412
-414	1	2	32	22	mit	APPR	ADP	0	O	0	0	mo	412
-415	1	2	32	22	der	ART	DET	0	O	119	0	nk	416
-416	1	2	32	22	Hand	NN	NOUN	0	O	119	root	nk	414
-417	1	2	32	22	zurück	PTKVZ	PART	0	O	0	0	svp	412
-418	1	2	32	22	.	$.	PUNCT	0	O	0	0	punct	407
-419	1	2	33	22	»	ADJA	PUNCT	0	O	0	0	punct	421
-420	1	2	33	23	Es	NN	PRON	0	O	0	0	ph	421
-421	1	2	33	23	würde	VAFIN	AUX	0	O	0	0	ROOT	421
-422	1	2	33	23	Sie	PPER	PRON	0	O	120	root	sb	421
-423	1	2	33	23	nur	ADV	ADV	0	O	0	0	mo	425
-424	1	2	33	23	ein	ART	DET	0	O	0	0	nk	425
-425	1	2	33	23	Wort	NN	NOUN	0	O	0	root	oa	428
-426	1	2	33	23	beim	APPRART	ADP	0	O	0	0	mnr	425
-427	1	2	33	23	Kaiser	NN	NOUN	0	O	122	root	nk	426
-428	1	2	33	23	kosten	VVINF	VERB	0	O	0	0	oc	421
-429	1	2	33	23	,	$,	PUNCT	0	O	0	0	punct	428
-430	1	2	33	23	daß	KOUS	SCONJ	0	O	0	0	cp	437
-431	1	2	33	23	er	PPER	PRON	0	O	123	root	sb	437
-432	1	2	33	23	direkt	ADJD	ADJ	0	O	0	0	mo	436
-433	1	2	33	23	in	APPR	ADP	0	O	0	0	mo	436
-434	1	2	33	23	die	ART	DET	0	O	124	0	nk	435
-435	1	2	33	23	Garde	NN	NOUN	0	O	124	root	nk	433
-436	1	2	33	23	eintreten	VVINF	VERB	0	O	0	0	oc	437
-437	1	2	33	23	könnte	VMFIN	VERB	0	O	0	0	oc	428
-438	1	2	33	23	.	$.	PUNCT	0	O	0	0	punct	421
-439	1	2	34	23	«	ADJA	PUNCT	0	O	0	0	punct	441
-440	1	2	34	23	»	ADJA	PUNCT	0	O	0	0	punct	441
-441	1	2	34	23	Seien	NN	AUX	0	O	0	0	ROOT	441
-442	1	2	34	23	Sie	PPER	PRON	0	O	125	root	sb	441
-443	1	2	34	23	überzeugt	ADJD	VERB	0	O	0	0	pd	441
-444	1	2	34	23	,	$,	PUNCT	0	O	0	0	punct	443
-445	1	2	34	23	Fürstin	NN	NOUN	0	O	126	root	pd	441
-446	1	2	34	23	,	$,	PUNCT	0	O	0	0	punct	441
-447	1	2	34	23	daß	KOUS	SCONJ	0	O	0	0	cp	451
-448	1	2	34	23	ich	PPER	PRON	0	O	127	root	sb	451
-449	1	2	34	23	alles	PIS	PRON	0	O	0	root	oa	450
-450	1	2	34	23	tun	VVINF	VERB	0	O	0	0	oc	451
-451	1	2	34	23	werde	VAFIN	AUX	0	O	0	0	re	442
-452	1	2	34	23	,	$,	PUNCT	0	O	0	0	punct	451
-453	1	2	34	23	was	PWS	PRON	0	O	129	root	oa	455
-454	1	2	34	23	ich	PPER	PRON	0	O	0	root	sb	455
-455	1	2	34	23	kann	VMFIN	VERB	0	O	0	0	oc	450
-456	1	2	34	23	,	$,	PUNCT	0	O	0	0	punct	441
-457	1	2	34	23	aber	KON	CONJ	0	O	0	0	cd	441
-458	1	2	34	23	es	PPER	PRON	0	O	131	root	sb	459
-459	1	2	34	23	ist	VAFIN	AUX	0	O	0	0	cj	457
-460	1	2	34	23	schwierig	ADJD	ADJ	0	O	0	0	pd	459
-461	1	2	34	23	,	$,	PUNCT	0	O	0	0	punct	459
-462	1	2	34	23	Seine	PPOSAT	DET	0	O	132	0	nk	463
-463	1	2	34	23	Majestät	NN	NOUN	0	O	132	root	oa	466
-464	1	2	34	23	darum	PAV	ADV	0	O	0	0	mo	466
-465	1	2	34	23	zu	PTKZU	PART	0	O	0	0	pm	466
-466	1	2	34	23	bitten	VVINF	VERB	0	O	0	0	re	458
-467	1	2	34	23	.	$.	PUNCT	0	O	0	0	punct	441
-468	1	2	35	24	Ich	PPER	PRON	0	O	133	root	sb	469
-469	1	2	35	24	möchte	VMFIN	VERB	0	O	0	0	ROOT	469
-470	1	2	35	24	Ihnen	PPER	PRON	0	O	134	root	da	471
-471	1	2	35	24	raten	VVINF	VERB	0	O	0	0	oc	469
-472	1	2	35	24	,	$,	PUNCT	0	O	0	0	punct	471
-473	1	2	35	24	sich	PRF	PRON	0	O	135	root	oa	478
-474	1	2	35	24	lieber	ADJD	ADV	0	O	0	0	mo	478
-475	1	2	35	24	an	APPR	ADP	0	O	0	0	op	478
-476	1	2	35	24	Rumjanzow	NE	NOUN	0	S-PER	136	root	nk	475
-477	1	2	35	24	zu	PTKZU	PART	0	O	0	0	pm	478
-478	1	2	35	24	wenden	VVINF	VERB	0	O	0	0	oc	471
-479	1	2	35	24	,	$,	PUNCT	0	O	0	0	punct	469
-480	1	2	35	24	das	PDS	PRON	0	O	137	root	sb	481
-481	1	2	35	24	wäre	VAFIN	AUX	0	O	0	0	cj	469
-482	1	2	35	24	besser	ADJD	ADJ	0	O	0	0	pd	481
-483	1	2	35	24	.	$.	PUNCT	0	O	0	0	punct	469
-484	1	2	36	25	«	NN	PUNCT	0	O	0	0	ROOT	484
-485	1	3	37	25	Die	ART	DET	MISC	O	138	0	nk	487
-486	1	3	37	25	alte	ADJA	ADJ	0	O	138	0	nk	487
-487	1	3	37	25	Dame	NN	NOUN	0	O	138	root	sb	488
-488	1	3	37	25	war	VAFIN	AUX	0	O	0	0	ROOT	488
-489	1	3	37	25	die	ART	DET	0	O	139	0	nk	490
-490	1	3	37	25	Fürstin	NN	NOUN	0	O	139	root	pd	488
-491	1	3	37	25	Drubezkoi	NN	PROPN	PER	S-PER	0	root	ag	490
-492	1	3	37	25	und	KON	CONJ	0	O	0	0	cd	488
-493	1	3	37	25	gehörte	VVFIN	VERB	0	O	0	0	cj	492
-494	1	3	37	25	einer	PIS	PRON	0	O	141	root	oa	493
-495	1	3	37	25	der	ART	DET	0	O	0	0	nk	497
-496	1	3	37	25	ersten	ADJA	ADJ	0	O	0	0	nk	497
-497	1	3	37	25	Familien	NN	NOUN	0	O	0	root	ag	494
-498	1	3	37	25	Rußlands	NE	PROPN	0	S-LOC	0	root	ag	497
-499	1	3	37	25	an	PTKVZ	PART	0	O	0	0	svp	493
-500	1	3	37	25	,	$,	PUNCT	0	O	0	0	punct	488
-501	1	3	37	25	aber	KON	CONJ	0	O	0	0	cd	488
-502	1	3	37	25	sie	PPER	PRON	0	O	144	root	sb	503
-503	1	3	37	25	lebte	VVFIN	VERB	0	O	0	0	cj	501
-504	1	3	37	25	in	APPR	ADP	0	O	0	0	mo	503
-505	1	3	37	25	Armut	NN	NOUN	0	O	145	root	nk	504
-506	1	3	37	25	und	KON	CONJ	0	O	0	0	cd	505
-507	1	3	37	25	Zurückgezogenheit	NN	NOUN	0	O	146	root	cj	506
-508	1	3	37	25	und	KON	CONJ	0	O	0	0	cd	503
-509	1	3	37	25	hatte	VAFIN	AUX	0	O	0	0	cj	508
-510	1	3	37	25	alle	PIAT	DET	0	O	147	0	nk	512
-511	1	3	37	25	früheren	ADJA	ADJ	0	O	147	0	nk	512
-512	1	3	37	25	Verbindungen	NN	NOUN	0	O	147	root	oa	513
-513	1	3	37	25	verloren	VVPP	VERB	0	O	0	0	oc	509
-514	1	3	37	25	.	$.	PUNCT	0	O	0	0	punct	488
-515	1	3	38	26	Sie	PPER	PRON	0	O	148	root	sb	516
-516	1	3	38	26	war	VAFIN	AUX	0	O	0	0	ROOT	516
-517	1	3	38	26	nur	ADV	ADV	0	O	0	0	mo	518
-518	1	3	38	26	nach	APPR	ADP	0	O	0	0	mo	520
-519	1	3	38	26	Petersburg	NE	PROPN	LOC	S-LOC	149	root	nk	518
-520	1	3	38	26	gekommen	VVPP	VERB	0	O	0	0	oc	516
-521	1	3	38	26	,	$,	PUNCT	0	O	0	0	punct	520
-522	1	3	38	26	um	KOUI	SCONJ	0	O	0	0	cp	528
-523	1	3	38	26	ihren	PPOSAT	DET	0	O	150	0	nk	524
-524	1	3	38	26	Sohn	NN	NOUN	PER	O	150	root	oa	528
-525	1	3	38	26	in	APPR	ADP	0	O	0	0	mo	528
-526	1	3	38	26	der	ART	DET	0	O	151	0	nk	527
-527	1	3	38	26	Garde	NN	NOUN	0	O	151	root	nk	525
-528	1	3	38	26	unterzubringen	VVIZU	VERB	0	O	0	0	mo	520
-529	1	3	38	26	,	$,	PUNCT	0	O	0	0	punct	516
-530	1	3	38	26	und	KON	CONJ	0	O	0	0	cd	516
-531	1	3	38	26	in	APPR	ADP	0	O	0	0	mo	545
-532	1	3	38	26	der	ART	DET	0	O	152	0	nk	533
-533	1	3	38	26	Hoffnung	NN	NOUN	0	O	152	root	nk	531
-534	1	3	38	26	,	$,	PUNCT	0	O	0	0	punct	533
-535	1	3	38	26	dem	ART	DET	0	O	153	0	nk	537
-536	1	3	38	26	Fürsten	NN	ADJ	0	O	153	0	nk	537
-537	1	3	38	26	Wassil	NE	NOUN	PER	S-PER	153	root	da	539
-538	1	3	38	26	zu	PTKZU	PART	0	O	0	0	pm	539
-539	1	3	38	26	begegnen	VVINF	VERB	0	O	0	0	oc	533
-540	1	3	38	26	,	$,	PUNCT	0	O	0	0	punct	541
-541	1	3	38	26	hatte	VAFIN	AUX	0	O	0	0	cj	530
-542	1	3	38	26	sie	PPER	PRON	0	O	154	root	sb	541
-543	1	3	38	26	diese	PDAT	DET	0	O	0	0	nk	544
-544	1	3	38	26	Soiree	NN	NOUN	0	O	0	root	oa	545
-545	1	3	38	26	besucht	VVPP	VERB	0	O	0	0	oc	541
-546	1	3	38	26	.	$.	PUNCT	0	O	0	0	punct	516
-547	1	3	39	27	Ihr	PPOSAT	PRON	0	O	156	root	nk	550
-548	1	3	39	27	einst	ADV	ADV	0	O	0	0	mo	549
-549	1	3	39	27	schönes	ADJA	ADJ	0	O	0	0	nk	550
-550	1	3	39	27	Gesicht	NN	NOUN	0	O	0	root	sb	551
-551	1	3	39	27	drückte	VVFIN	VERB	0	O	0	0	ROOT	551
-552	1	3	39	27	lebhaften	ADJA	ADJ	0	O	158	0	nk	553
-553	1	3	39	27	Verdruß	NN	NOUN	PER	O	158	root	sb	551
-554	1	3	39	27	aus	PTKVZ	PART	0	O	0	0	svp	551
-555	1	3	39	27	,	$,	PUNCT	0	O	0	0	punct	551
-556	1	3	39	27	aber	KON	CONJ	0	O	0	0	cd	551
-557	1	3	39	27	dann	ADV	ADV	0	O	0	0	mo	558
-558	1	3	39	27	lächelte	VVFIN	VERB	0	O	0	0	cj	556
-559	1	3	39	27	sie	PPER	PRON	0	O	159	root	sb	558
-560	1	3	39	27	wieder	ADV	ADV	0	O	0	0	mo	558
-561	1	3	39	27	und	KON	CONJ	0	O	0	0	cd	558
-562	1	3	39	27	ergriff	VVFIN	VERB	0	O	0	0	cj	561
-563	1	3	39	27	den	ART	DET	0	O	160	0	nk	564
-564	1	3	39	27	Arm	NN	NOUN	0	O	160	root	oa	562
-565	1	3	39	27	des	ART	DET	0	O	0	0	nk	566
-566	1	3	39	27	Fürsten	NN	NOUN	0	O	0	root	ag	564
-567	1	3	39	27	noch	ADV	ADV	0	O	0	0	mo	558
-568	1	3	39	27	kräftiger	ADJD	ADJ	0	O	0	0	mo	558
-569	1	3	39	27	.	$.	PUNCT	0	O	0	0	punct	551
+	chapter	paragraphs	sentence_spacy	sentence_smo	token	pos_treetagger	pos_spacy	pos_flair_base	ner_spacy	ner_flair_base	ner_flair_fine	noun_chunk_spacy	noun_chunk_root_spacy	dependency_tag_spacy	dependency_head_spacy
+0	0	0	1	0	Der	ART	DET	ART	0	O	O	1	0	nk	1
+1	0	0	1	0	Fürst	NN	NOUN	NN	0	O	O	1	root	sb	2
+2	0	0	1	0	machte	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	2
+3	0	0	1	0	wieder	ADV	ADV	ADV	0	O	O	0	0	mo	2
+4	0	0	1	0	ein	ART	DET	ART	0	O	O	2	0	nk	6
+5	0	0	1	0	verdrießliches	ADJA	ADJ	ADJA	MISC	O	O	2	0	nk	6
+6	0	0	1	0	Gesicht	NN	NOUN	NN	0	O	O	2	root	oa	2
+7	0	0	1	0	und	KON	CONJ	KON	0	O	O	0	0	cd	2
+8	0	0	1	0	entfernte	VVFIN	VERB	VVFIN	0	O	O	0	0	cj	7
+9	0	0	1	0	sich	PRF	PRON	PRF	0	O	O	3	root	oa	8
+10	0	0	1	0	.	$.	PUNCT	$.	0	O	O	0	0	punct	2
+11	0	0	2	1	Peter	NE	PROPN	NE	PER	S-PER	S-PER	4	root	sb	27
+12	0	0	2	1	,	$,	PUNCT	$,	0	O	O	0	0	punct	11
+13	0	0	2	1	der	PRELS	PRON	PRELS	0	O	O	5	root	sb	25
+14	0	0	2	1	ihn	PPER	PRON	PPER	0	O	O	0	root	oa	24
+15	0	0	2	1	seit	APPR	ADP	APPR	0	O	O	0	0	mo	24
+16	0	0	2	1	seinem	PPOSAT	DET	PPOSAT	0	O	O	7	0	nk	17
+17	0	0	2	1	Eintreten	NN	NOUN	NN	0	O	O	7	root	nk	15
+18	0	0	2	1	mit	APPR	ADP	APPR	0	O	O	0	0	mo	24
+19	0	0	2	1	seinen	PPOSAT	DET	PPOSAT	0	O	O	8	0	nk	23
+20	0	0	2	1	vergnügten	ADJA	ADJ	ADJA	0	O	O	8	0	nk	23
+21	0	0	2	1	,	$,	PUNCT	$,	0	O	O	8	0	punct	20
+22	0	0	2	1	freundlichen	ADJA	ADJ	ADJA	0	O	O	8	0	cj	20
+23	0	0	2	1	Augen	NN	NOUN	NN	0	O	O	8	root	nk	18
+24	0	0	2	1	verfolgt	VVPP	VERB	VVPP	0	O	O	0	0	oc	25
+25	0	0	2	1	hatte	VAFIN	AUX	VAFIN	0	O	O	0	0	rc	11
+26	0	0	2	1	,	$,	PUNCT	$,	0	O	O	0	0	punct	27
+27	0	0	2	1	näherte	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	27
+28	0	0	2	1	sich	PRF	PRON	PRF	0	O	O	9	root	oa	27
+29	0	0	2	1	ihm	PPER	PRON	PPER	0	O	O	0	root	da	27
+30	0	0	2	1	jetzt	ADV	ADV	ADV	0	O	O	0	0	mo	27
+31	0	0	2	1	und	KON	CONJ	KON	0	O	O	0	0	cd	27
+32	0	0	2	1	ergriff	VVFIN	VERB	VVFIN	0	O	O	0	0	cj	31
+33	0	0	2	1	seine	PPOSAT	DET	PPOSAT	0	O	O	11	0	nk	34
+34	0	0	2	1	Hand	NN	NOUN	NN	0	O	O	11	root	oa	32
+35	0	0	2	1	.	$.	PUNCT	$.	0	O	O	0	0	punct	27
+36	0	0	3	2	Die	ART	DET	ART	0	O	O	12	0	nk	37
+37	0	0	3	2	Miene	NN	NOUN	NN	0	O	O	12	root	sb	41
+38	0	0	3	2	des	ART	DET	ART	0	O	O	0	0	nk	39
+39	0	0	3	2	Fürsten	NN	ADJ	NN	0	O	O	0	0	ag	37
+40	0	0	3	2	Andree	NE	PROPN	NE	PER	S-PER	S-PER	13	root	nk	39
+41	0	0	3	2	erhellte	VVFIN	VERB	VVFIN	0	O	O	0	0	oc	50
+42	0	0	3	2	sich	PRF	PRON	PRF	0	O	O	14	root	oa	41
+43	0	0	3	2	plötzlich	ADJD	ADJ	ADJD	0	O	O	0	0	mo	41
+44	0	0	3	2	und	KON	CONJ	KON	0	O	O	0	0	cd	43
+45	0	0	3	2	mit	APPR	ADP	APPR	0	O	O	0	0	cj	44
+46	0	0	3	2	gutmütigem	ADJA	ADJ	ADJA	0	O	O	15	0	nk	49
+47	0	0	3	2	,	$,	PUNCT	$,	0	O	O	15	0	punct	46
+48	0	0	3	2	herzlichem	ADJA	ADJ	ADJA	0	O	O	15	0	cj	46
+49	0	0	3	2	Lächeln	NN	NOUN	NN	0	O	O	15	root	nk	45
+50	0	0	3	2	rief	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	50
+51	0	0	3	2	er	PPER	PRON	PPER	0	O	O	16	root	sb	50
+52	0	0	3	2	:	$.	PUNCT	$.	0	O	O	0	0	punct	50
+53	0	0	4	2	»	ADJA	PUNCT	$(	0	O	O	0	0	punct	54
+54	0	0	4	2	Ach	ITJ	INTJ	ITJ	MISC	O	O	0	0	ROOT	54
+55	0	0	4	2	,	$,	PUNCT	$,	0	O	O	0	0	punct	54
+56	0	0	4	2	wirklich	ADJD	ADJ	ADJD	0	O	O	0	0	mo	54
+57	0	0	4	2	!	$.	PUNCT	$.	0	O	O	0	0	punct	54
+58	0	0	5	3	Bist	VAFIN	AUX	VAFIN	0	O	O	0	0	ROOT	58
+59	0	0	5	3	du	PPER	PRON	PPER	0	O	O	17	root	sb	58
+60	0	0	5	3	auch	ADV	ADV	ADV	0	O	O	0	0	mo	61
+61	0	0	5	3	in	APPR	ADP	APPR	0	O	O	0	0	mo	58
+62	0	0	5	3	der	ART	DET	ART	0	O	O	18	0	nk	64
+63	0	0	5	3	großen	ADJA	ADJ	ADJA	0	O	O	18	0	nk	64
+64	0	0	5	3	Welt	NN	NOUN	NN	0	O	O	18	root	nk	61
+65	0	0	5	3	?	$.	PUNCT	$.	0	O	O	0	0	punct	58
+66	0	0	6	3	«	ADJA	PUNCT	$(	0	O	O	0	0	ROOT	66
+67	0	0	7	3	»	NN	PUNCT	$(	0	O	O	0	0	punct	69
+68	0	0	7	3	Ich	PPER	PRON	PPER	0	O	O	19	root	sb	69
+69	0	0	7	3	wußte	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	69
+70	0	0	7	3	,	$,	PUNCT	$,	0	O	O	0	0	punct	69
+71	0	0	7	3	daß	KOUS	SCONJ	KOUS	0	O	O	0	0	cp	75
+72	0	0	7	3	Sie	PPER	PRON	PPER	0	O	O	20	root	sb	75
+73	0	0	7	3	hier	ADV	ADV	ADV	0	O	O	0	0	mo	74
+74	0	0	7	3	sein	VAINF	AUX	VAINF	0	O	O	0	0	oc	75
+75	0	0	7	3	würden	VAFIN	AUX	VAFIN	0	O	O	0	0	oc	69
+76	0	0	7	3	!	$.	PUNCT	$.	0	O	O	0	0	punct	69
+77	0	0	8	4	Ich	PPER	PRON	PPER	0	O	O	21	root	sb	78
+78	0	0	8	4	werde	VAFIN	AUX	VAFIN	0	O	O	0	0	ROOT	78
+79	0	0	8	4	nächstens	ADV	ADV	ADV	PER	O	O	0	0	mo	82
+80	0	0	8	4	bei	APPR	ADP	APPR	0	O	O	0	0	mo	82
+81	0	0	8	4	Ihnen	PPER	PRON	PPER	0	O	O	22	root	nk	80
+82	0	0	8	4	speisen	VVINF	VERB	VVINF	0	O	O	0	0	oc	78
+83	0	0	8	4	,	$,	PUNCT	$,	0	O	O	0	0	punct	84
+84	0	0	8	4	darf	VMFIN	VERB	VMFIN	0	O	O	0	0	cj	78
+85	0	0	8	4	ich	PPER	PRON	PPER	0	O	O	23	root	sb	84
+86	0	0	8	4	?	$.	PUNCT	$.	0	O	O	0	0	punct	84
+87	0	0	9	4	«	ADJD	PUNCT	$(	0	O	O	0	0	punct	88
+88	0	0	9	4	fügte	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	88
+89	0	0	9	4	er	PPER	PRON	PPER	0	O	O	24	root	sb	88
+90	0	0	9	4	leise	ADJD	ADJ	ADJD	0	O	O	0	0	mo	88
+91	0	0	9	4	hinzu	PTKVZ	PART	PTKVZ	0	O	O	0	0	svp	88
+92	0	0	9	4	.	$.	PUNCT	$.	0	O	O	0	0	punct	88
+93	0	0	10	4	»	ADJA	PUNCT	$(	0	O	O	0	0	ROOT	93
+94	0	0	11	5	Nein	NN	PART	PTKANT	PER	O	O	0	0	dm	97
+95	0	0	11	5	,	$,	PUNCT	$,	0	O	O	0	0	punct	97
+96	0	0	11	5	du	PPER	PRON	PPER	0	O	O	0	0	pnc	97
+97	0	0	11	5	darfst	VMFIN	PROPN	VVFIN	PER	O	O	0	0	oc	101
+98	0	0	11	5	nicht	PTKNEG	PART	PTKNEG	0	O	O	0	0	ng	97
+99	0	0	11	5	«	ADJD	PUNCT	$(	0	O	O	0	0	punct	97
+100	0	0	11	5	,	$,	PUNCT	$,	0	O	O	0	0	punct	101
+101	0	0	11	5	sagte	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	101
+102	0	0	11	5	Andree	NE	PROPN	NE	PER	S-PER	S-PER	25	root	sb	101
+103	0	0	11	5	lachend	ADJD	ADJ	ADJD	0	O	O	0	0	mo	101
+104	0	0	11	5	,	$,	PUNCT	$,	0	O	O	0	0	punct	101
+105	0	0	11	5	indem	KOUS	SCONJ	KOUS	0	O	O	0	0	cp	116
+106	0	0	11	5	er	PPER	PRON	PPER	0	O	O	26	root	sb	116
+107	0	0	11	5	Peter	NE	PROPN	NE	PER	S-PER	S-PER	0	root	oa	116
+108	0	0	11	5	durch	APPR	ADP	APPR	0	O	O	0	0	mo	116
+109	0	0	11	5	einen	ART	DET	ART	0	O	O	28	0	nk	110
+110	0	0	11	5	Händedruck	NN	NOUN	NN	0	O	O	28	root	nk	108
+111	0	0	11	5	die	ART	DET	ART	0	O	O	0	0	nk	112
+112	0	0	11	5	Überflüssigkeit	NN	NOUN	NN	0	O	O	0	root	oa	116
+113	0	0	11	5	seiner	PPOSAT	DET	PPOSAT	0	O	O	0	0	nk	114
+114	0	0	11	5	Frage	NN	NOUN	NN	0	O	O	0	root	ag	112
+115	0	0	11	5	begreiflich	ADJD	ADJ	ADJD	0	O	O	0	0	mo	116
+116	0	0	11	5	machte	VVFIN	VERB	VVFIN	0	O	O	0	0	mo	101
+117	0	0	11	5	.	$.	PUNCT	$.	0	O	O	0	0	punct	101
+118	0	0	12	6	Er	PPER	PRON	PPER	0	O	O	31	root	sb	119
+119	0	0	12	6	wollte	VMFIN	VERB	VMFIN	0	O	O	0	0	ROOT	119
+120	0	0	12	6	noch	ADV	ADV	ADV	0	O	O	32	0	mo	121
+121	0	0	12	6	etwas	PIS	PRON	PIS	0	O	O	32	root	oa	122
+122	0	0	12	6	sagen	VVINF	VERB	VVINF	0	O	O	0	0	oc	119
+123	0	0	12	6	,	$,	PUNCT	$,	0	O	O	0	0	punct	122
+124	0	0	12	6	als	KOUS	CONJ	KOUS	0	O	O	0	0	cp	132
+125	0	0	12	6	der	ART	DET	ART	0	O	O	33	0	nk	126
+126	0	0	12	6	Fürst	NN	NOUN	NN	0	O	O	33	root	sb	132
+127	0	0	12	6	Wassil	NE	PROPN	NE	PER	S-PER	S-PER	33	0	nk	126
+128	0	0	12	6	und	KON	CONJ	KON	0	O	O	0	0	cd	127
+129	0	0	12	6	seine	PPOSAT	DET	PPOSAT	0	O	O	34	0	nk	130
+130	0	0	12	6	Tochter	NN	NOUN	NN	0	O	O	34	root	cj	128
+131	0	0	12	6	sich	PRF	PRON	PRF	0	O	O	0	root	oa	132
+132	0	0	12	6	erhoben	VVPP	VERB	VVFIN	0	O	O	0	0	mo	122
+133	0	0	12	6	,	$,	PUNCT	$,	0	O	O	0	0	punct	119
+134	0	0	12	6	und	KON	CONJ	KON	0	O	O	0	0	cd	119
+135	0	0	12	6	die	ART	DET	ART	0	O	O	36	0	nk	136
+136	0	0	12	6	Umstehenden	NN	NOUN	NN	0	O	O	36	root	oa	140
+137	0	0	12	6	auf	APPR	ADP	APPR	0	O	O	0	0	mo	140
+138	0	0	12	6	die	ART	DET	ART	0	O	O	37	0	nk	139
+139	0	0	12	6	Seite	NN	NOUN	NN	0	O	O	37	root	nk	137
+140	0	0	12	6	traten	VVFIN	VERB	VVFIN	0	O	O	0	0	cj	134
+141	0	0	12	6	,	$,	PUNCT	$,	0	O	O	0	0	punct	140
+142	0	0	12	6	um	KOUI	SCONJ	KOUI	0	O	O	0	0	cp	146
+143	0	0	12	6	ihnen	PPER	PRON	PPER	0	O	O	38	root	da	146
+144	0	0	12	6	Raum	NN	NOUN	NN	0	O	O	0	root	oa	146
+145	0	0	12	6	zu	PTKZU	PART	PTKZU	0	O	O	0	0	pm	146
+146	0	0	12	6	geben	VVINF	VERB	VVINF	0	O	O	0	0	mo	140
+147	0	0	12	6	.	$.	PUNCT	$.	0	O	O	0	0	punct	119
+148	0	1	13	6	»	ADJA	PUNCT	$(	0	O	O	0	0	punct	149
+149	0	1	13	7	Entschuldigen	NN	VERB	VVFIN	0	O	O	0	0	oc	156
+150	0	1	13	7	Sie	PPER	PRON	PPER	0	O	O	40	root	sb	149
+151	0	1	13	7	,	$,	PUNCT	$,	0	O	O	0	0	punct	150
+152	0	1	13	7	verehrter	ADJA	ADJ	ADJA	0	O	O	41	0	nk	153
+153	0	1	13	7	Graf	NN	NOUN	NN	0	O	O	41	root	app	150
+154	0	1	13	7	«	ADJD	PUNCT	$(	0	O	O	0	0	punct	149
+155	0	1	13	7	,	$,	PUNCT	$,	0	O	O	0	0	punct	156
+156	0	1	13	7	sagte	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	156
+157	0	1	13	7	der	ART	DET	ART	0	O	O	42	0	nk	158
+158	0	1	13	7	Fürst	NN	NOUN	NN	0	O	O	42	root	sb	156
+159	0	1	13	7	,	$,	PUNCT	$,	0	O	O	0	0	punct	156
+160	0	1	13	7	»	NN	PUNCT	$(	0	O	O	0	0	punct	167
+161	0	1	13	7	diese	PDAT	DET	PDAT	0	O	O	43	0	nk	163
+162	0	1	13	7	ungelegene	ADJA	ADJ	ADJA	0	O	O	43	0	nk	163
+163	0	1	13	7	Festlichkeit	NN	NOUN	NN	0	O	O	43	root	sb	167
+164	0	1	13	7	beim	APPRART	ADP	APPRART	0	O	O	0	0	mnr	163
+165	0	1	13	7	englischen	ADJA	ADJ	ADJA	MISC	O	S-LOCderiv	44	0	nk	166
+166	0	1	13	7	Gesandten	NN	NOUN	NN	0	O	O	44	root	nk	164
+167	0	1	13	7	beraubt	VVFIN	VERB	VVFIN	0	O	O	0	0	oc	156
+168	0	1	13	7	uns	PPER	PRON	PPER	0	O	O	45	root	da	167
+169	0	1	13	7	eines	ART	DET	ART	0	O	O	0	0	nk	170
+170	0	1	13	7	Vergnügens	NN	NOUN	NN	0	O	O	0	root	og	167
+171	0	1	13	7	und	KON	CONJ	KON	0	O	O	0	0	cd	167
+172	0	1	13	7	nötigt	VVFIN	VERB	VVFIN	0	O	O	0	0	cj	171
+173	0	1	13	7	uns	PPER	PRON	PPER	0	O	O	47	root	oa	172
+174	0	1	13	7	,	$,	PUNCT	$,	0	O	O	0	0	punct	172
+175	0	1	13	7	Sie	PPER	PRON	PPER	0	O	O	48	root	oa	177
+176	0	1	13	7	zu	PTKZU	PART	PTKZU	0	O	O	0	0	pm	177
+177	0	1	13	7	unterbrechen	VVINF	VERB	VVINF	0	O	O	0	0	oc	172
+178	0	1	13	7	.	$.	PUNCT	$.	0	O	O	0	0	punct	156
+179	0	1	14	8	Ich	PPER	PRON	PPER	0	O	O	49	root	sb	180
+180	0	1	14	8	bedaure	VVFIN	VERB	VVFIN	0	O	O	0	0	oc	183
+181	0	1	14	8	sehr	ADV	ADV	ADV	0	O	O	0	0	mo	180
+182	0	1	14	8	,	$,	PUNCT	$,	0	O	O	0	0	punct	183
+183	0	1	14	8	teuerste	ADJA	ADJ	ADJA	0	O	O	0	0	ROOT	183
+184	0	1	14	8	Anna	NE	PROPN	NE	PER	B-PER	B-PER	50	0	pnc	185
+185	0	1	14	8	Pawlowna	NE	PROPN	NE	0	E-PER	E-PER	50	root	sb	183
+186	0	1	14	8	,	$,	PUNCT	$,	0	O	O	0	0	punct	183
+187	0	1	14	8	Ihre	PPOSAT	DET	PPOSAT	0	O	O	51	0	nk	189
+188	0	1	14	8	reizende	ADJA	ADJ	ADJA	0	O	O	51	0	nk	189
+189	0	1	14	8	Soiree	NN	PROPN	NN	LOC	O	O	51	root	oa	190
+190	0	1	14	8	verlassen	VVINF	VERB	VVINF	0	O	O	0	0	oc	192
+191	0	1	14	8	zu	PTKZU	PART	PTKZU	0	O	O	0	0	pm	192
+192	0	1	14	8	müssen	VMINF	VERB	VMINF	0	O	O	0	0	oc	183
+193	0	1	14	8	.	$.	PUNCT	$.	0	O	O	0	0	punct	183
+194	0	1	15	9	«	NN	PUNCT	$(	0	O	O	0	0	ROOT	194
+195	0	1	16	9	Seine	PPOSAT	DET	PPOSAT	0	O	O	52	0	nk	196
+196	0	1	16	9	Tochter	NN	NOUN	NN	0	O	O	52	root	sb	198
+197	0	1	16	9	Helene	NE	PROPN	NE	PER	S-PER	S-PER	52	0	nk	196
+198	0	1	16	9	bahnte	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	198
+199	0	1	16	9	sich	PRF	PRON	PRF	0	O	O	53	root	oa	198
+200	0	1	16	9	einen	ART	DET	ART	0	O	O	0	0	nk	201
+201	0	1	16	9	Weg	NN	NOUN	NN	0	O	O	0	root	oa	198
+202	0	1	16	9	durch	APPR	ADP	APPR	0	O	O	0	0	mnr	201
+203	0	1	16	9	die	ART	DET	ART	0	O	O	55	0	nk	204
+204	0	1	16	9	Stühle	NN	NOUN	NN	0	O	O	55	root	nk	202
+205	0	1	16	9	,	$,	PUNCT	$,	0	O	O	0	0	punct	198
+206	0	1	16	9	indem	KOUS	SCONJ	KOUS	0	O	O	0	0	cp	213
+207	0	1	16	9	sie	PPER	PRON	PPER	0	O	O	56	root	sb	213
+208	0	1	16	9	ihr	PPOSAT	DET	PPOSAT	0	O	O	0	0	nk	209
+209	0	1	16	9	Kleid	NN	NOUN	NN	0	O	O	0	root	oa	213
+210	0	1	16	9	mit	APPR	ADP	APPR	0	O	O	0	0	mo	213
+211	0	1	16	9	einer	ART	DET	ART	0	O	O	58	0	nk	212
+212	0	1	16	9	Hand	NN	NOUN	NN	0	O	O	58	root	nk	210
+213	0	1	16	9	zurückhielt	VVFIN	VERB	VVFIN	0	O	O	0	0	mo	198
+214	0	1	16	9	.	$.	PUNCT	$.	0	O	O	0	0	punct	198
+215	0	1	17	10	Peter	NE	PROPN	NE	PER	S-PER	S-PER	59	root	sb	216
+216	0	1	17	10	betrachtete	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	216
+217	0	1	17	10	diese	PDAT	DET	PDAT	0	O	O	60	0	nk	219
+218	0	1	17	10	blendende	ADJA	ADJ	ADJA	0	O	O	60	0	nk	219
+219	0	1	17	10	Schönheit	NN	NOUN	NN	0	O	O	60	root	oa	216
+220	0	1	17	10	mit	APPR	ADP	APPR	0	O	O	0	0	mo	216
+221	0	1	17	10	einer	ART	DET	ART	0	O	O	61	0	nk	222
+222	0	1	17	10	Mischung	NN	NOUN	NN	0	O	O	61	root	nk	220
+223	0	1	17	10	von	APPR	ADP	APPR	0	O	O	0	0	pg	222
+224	0	1	17	10	Entzücken	NN	NOUN	NN	0	O	O	62	root	nk	223
+225	0	1	17	10	und	KON	CONJ	KON	0	O	O	0	0	cd	224
+226	0	1	17	10	Schrecken	NN	NOUN	NN	0	O	O	63	root	cj	225
+227	0	1	17	10	.	$.	PUNCT	$.	0	O	O	0	0	punct	216
+228	0	1	18	10	»	NN	PUNCT	$(	0	O	O	0	0	punct	230
+229	0	1	18	11	Sie	PPER	PRON	PPER	0	O	O	64	root	sb	230
+230	0	1	18	11	ist	VAFIN	AUX	VAFIN	0	O	O	0	0	oc	235
+231	0	1	18	11	sehr	ADV	ADV	ADV	0	O	O	0	0	mo	232
+232	0	1	18	11	schön	ADJD	ADJ	ADJD	0	O	O	0	0	pd	230
+233	0	1	18	11	!	$.	PUNCT	$.	0	O	O	0	0	punct	230
+234	0	1	18	11	«	ADJD	PUNCT	$(	0	O	O	0	0	punct	235
+235	0	1	18	11	sagte	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	235
+236	0	1	18	11	der	ART	DET	ART	0	O	O	65	0	nk	237
+237	0	1	18	11	Fürst	NN	NOUN	NN	0	O	O	65	root	sb	235
+238	0	1	18	11	Andree	NE	PROPN	NE	PER	S-PER	S-PER	65	0	nk	237
+239	0	1	18	11	.	$.	PUNCT	$.	0	O	O	0	0	punct	235
+240	0	1	19	11	»	ADJA	PUNCT	$(	0	O	O	0	0	ROOT	240
+241	0	1	20	12	Ja	NN	PART	PTKANT	0	O	O	0	0	mo	246
+242	0	1	20	12	,	$,	PUNCT	$,	0	O	O	0	0	punct	243
+243	0	1	20	12	sehr	ADV	ADV	ADV	0	O	O	0	0	mo	246
+244	0	1	20	12	«	ADJD	PUNCT	$(	0	O	O	0	0	punct	243
+245	0	1	20	12	,	$,	PUNCT	$,	0	O	O	0	0	punct	246
+246	0	1	20	12	erwiderte	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	246
+247	0	1	20	12	Peter	NE	PROPN	NE	PER	S-PER	S-PER	66	root	sb	246
+248	0	1	20	12	.	$.	PUNCT	$.	0	O	O	0	0	punct	246
+249	0	1	21	13	Der	ART	DET	ART	0	O	O	67	0	nk	250
+250	0	1	21	13	Fürst	NN	NOUN	NN	0	O	O	67	root	sb	252
+251	0	1	21	13	Wassil	NE	PROPN	NE	PER	S-PER	S-PER	67	0	nk	250
+252	0	1	21	13	drückte	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	252
+253	0	1	21	13	ihm	PPER	PRON	PPER	0	O	O	68	root	da	252
+254	0	1	21	13	im	APPRART	ADP	APPRART	0	O	O	0	0	mo	252
+255	0	1	21	13	Vorübergehen	NN	NOUN	NN	0	O	O	69	root	nk	254
+256	0	1	21	13	die	ART	DET	ART	0	O	O	0	0	nk	257
+257	0	1	21	13	Hand	NN	NOUN	NN	0	O	O	0	root	oa	252
+258	0	1	21	13	.	$.	PUNCT	$.	0	O	O	0	0	punct	252
+259	0	1	22	13	»	ADJA	PUNCT	$(	0	O	O	0	0	punct	260
+260	0	1	22	14	Vollenden	NN	VERB	VVFIN	0	O	O	0	0	oc	268
+261	0	1	22	14	Sie	PPER	PRON	PPER	0	O	O	71	root	sb	260
+262	0	1	22	14	die	ART	DET	ART	0	O	O	0	0	nk	263
+263	0	1	22	14	Erziehung	NN	NOUN	NN	0	O	O	0	root	oa	260
+264	0	1	22	14	dieses	PDAT	DET	PDAT	0	O	O	0	0	nk	265
+265	0	1	22	14	Bären	NN	NOUN	NN	0	O	O	0	root	ag	263
+266	0	1	22	14	«	ADJD	PUNCT	$(	0	O	O	0	0	punct	260
+267	0	1	22	14	,	$,	PUNCT	$,	0	O	O	0	0	punct	268
+268	0	1	22	14	sagte	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	268
+269	0	1	22	14	er	PPER	PRON	PPER	0	O	O	74	root	sb	268
+270	0	1	22	14	zu	APPR	ADP	APPR	0	O	O	0	0	mo	268
+271	0	1	22	14	der	ART	DET	ART	0	O	O	75	0	nk	272
+272	0	1	22	14	Hofdame	NN	NOUN	NN	MISC	O	O	75	root	nk	270
+273	0	1	22	14	.	$.	PUNCT	$.	0	O	O	0	0	punct	268
+274	0	1	23	14	»	NN	PUNCT	$(	0	O	O	0	0	punct	278
+275	0	1	23	15	Seit	APPR	ADP	APPR	0	O	O	0	0	mo	278
+276	0	1	23	15	elf	CARD	NUM	CARD	0	O	O	76	0	nk	277
+277	0	1	23	15	Monaten	NN	NOUN	NN	MISC	O	O	76	root	nk	275
+278	0	1	23	15	wohnt	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	278
+279	0	1	23	15	er	PPER	PRON	PPER	0	O	O	77	root	sb	278
+280	0	1	23	15	bei	APPR	ADP	APPR	0	O	O	0	0	mo	278
+281	0	1	23	15	mir	PPER	PRON	PPER	0	O	O	78	root	nk	280
+282	0	1	23	15	und	KON	CONJ	KON	0	O	O	0	0	cd	278
+283	0	1	23	15	dies	PDS	PRON	PDS	0	O	O	79	root	sb	284
+284	0	1	23	15	ist	VAFIN	AUX	VAFIN	0	O	O	0	0	cj	282
+285	0	1	23	15	das	PDS	PRON	ART	0	O	O	80	root	nk	286
+286	0	1	23	15	erstemal	ADV	NOUN	ADJA	0	O	O	0	root	pd	284
+287	0	1	23	15	,	$,	PUNCT	$,	0	O	O	0	0	punct	284
+288	0	1	23	15	daß	KOUS	SCONJ	KOUS	0	O	O	0	0	cp	293
+289	0	1	23	15	ich	PPER	PRON	PPER	0	O	O	82	root	sb	293
+290	0	1	23	15	ihn	PPER	PRON	PPER	0	O	O	0	root	oa	293
+291	0	1	23	15	in	APPR	ADP	APPR	0	O	O	0	0	mo	293
+292	0	1	23	15	Gesellschaft	NN	NOUN	NN	0	O	O	84	root	nk	291
+293	0	1	23	15	sehe	VVFIN	VERB	VVFIN	0	O	O	0	0	re	283
+294	0	1	23	15	.	$.	PUNCT	$.	0	O	O	0	0	punct	278
+295	0	1	24	16	Nichts	PIS	PRON	PIS	0	O	O	85	root	sb	296
+296	0	1	24	16	bildet	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	296
+297	0	1	24	16	einen	ART	DET	ART	0	O	O	86	0	nk	299
+298	0	1	24	16	jungen	ADJA	ADJ	ADJA	0	O	O	86	0	nk	299
+299	0	1	24	16	Mann	NN	NOUN	NN	0	O	O	86	root	oa	296
+300	0	1	24	16	so	ADV	ADV	ADV	0	O	O	0	0	mo	296
+301	0	1	24	16	wie	KOKOM	CONJ	KOKOM	0	O	O	0	0	cm	303
+302	0	1	24	16	die	ART	DET	ART	0	O	O	0	0	nk	303
+303	0	1	24	16	Gesellschaft	NN	NOUN	NN	ORG	O	O	0	0	cc	300
+304	0	1	24	16	geistreicher	ADJA	ADJ	ADJA	0	O	O	87	0	nk	305
+305	0	1	24	16	Damen	NN	NOUN	NN	0	O	O	87	root	ag	303
+306	0	1	24	16	.	$.	PUNCT	$.	0	O	O	0	0	punct	296
+307	0	1	25	17	«	NN	PUNCT	$(	0	O	O	0	0	ROOT	307
+308	1	2	26	17	Die	ART	DET	ART	0	O	O	88	0	nk	309
+309	1	2	26	17	Hofdame	NN	NOUN	NN	0	O	O	88	root	sb	310
+310	1	2	26	17	versprach	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	310
+311	1	2	26	17	lächelnd	ADJD	ADJ	ADJD	0	O	O	0	0	mo	310
+312	1	2	26	17	,	$,	PUNCT	$,	0	O	O	0	0	punct	310
+313	1	2	26	17	sich	PRF	PRON	PRF	0	O	O	89	root	oa	317
+314	1	2	26	17	mit	APPR	ADP	APPR	0	O	O	0	0	mo	317
+315	1	2	26	17	Peter	NE	PROPN	NE	PER	S-PER	S-PER	90	root	nk	314
+316	1	2	26	17	zu	PTKZU	PART	PTKZU	0	O	O	0	0	pm	317
+317	1	2	26	17	beschäftigen	VVINF	VERB	VVINF	0	O	O	0	0	oc	310
+318	1	2	26	17	,	$,	PUNCT	$,	0	O	O	0	0	punct	317
+319	1	2	26	17	welcher	PWS	DET	PRELS	0	O	O	0	0	sb	333
+320	1	2	26	17	,	$,	PUNCT	$,	0	O	O	0	0	punct	319
+321	1	2	26	17	wie	KOUS	ADV	PWAV	0	O	O	0	0	mo	323
+322	1	2	26	17	sie	PPER	PRON	PPER	0	O	O	91	root	sb	323
+323	1	2	26	17	wußte	VVFIN	VERB	VVFIN	0	O	O	0	0	cc	319
+324	1	2	26	17	,	$,	PUNCT	$,	0	O	O	0	0	punct	333
+325	1	2	26	17	durch	APPR	ADP	APPR	0	O	O	0	0	mo	332
+326	1	2	26	17	seinen	PPOSAT	DET	PPOSAT	0	O	O	92	0	nk	327
+327	1	2	26	17	Vater	NN	NOUN	NN	0	O	O	92	root	nk	325
+328	1	2	26	17	mit	APPR	ADP	APPR	0	O	O	0	0	mo	332
+329	1	2	26	17	dem	ART	DET	ART	0	O	O	0	0	nk	330
+330	1	2	26	17	Fürsten	NN	ADJ	NN	0	O	O	0	0	nk	328
+331	1	2	26	17	Wassil	NE	NOUN	NE	PER	S-PER	S-PER	93	root	nk	330
+332	1	2	26	17	verwandt	VVPP	VERB	VVPP	0	O	O	0	0	pd	333
+333	1	2	26	17	war	VAFIN	AUX	VAFIN	0	O	O	0	0	rc	315
+334	1	2	26	17	.	$.	PUNCT	$.	0	O	O	0	0	punct	310
+335	1	2	27	18	Die	ART	DET	ART	0	O	O	94	0	nk	337
+336	1	2	27	18	alte	ADJA	ADJ	ADJA	0	O	O	94	0	nk	337
+337	1	2	27	18	Dame	NN	NOUN	NN	0	O	O	94	root	sb	345
+338	1	2	27	18	,	$,	PUNCT	$,	0	O	O	0	0	punct	337
+339	1	2	27	18	welche	PRELS	PRON	PRELS	0	O	O	95	root	sb	343
+340	1	2	27	18	neben	APPR	ADP	APPR	0	O	O	0	0	mo	343
+341	1	2	27	18	der	ART	DET	ART	0	O	O	96	0	nk	342
+342	1	2	27	18	Tante	NN	NOUN	NN	0	O	O	96	root	nk	340
+343	1	2	27	18	saß	VVFIN	VERB	VVFIN	0	O	O	0	0	rc	337
+344	1	2	27	18	,	$,	PUNCT	$,	0	O	O	0	0	punct	345
+345	1	2	27	18	erhob	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	345
+346	1	2	27	18	sich	PRF	PRON	PRF	0	O	O	97	root	oa	345
+347	1	2	27	18	plötzlich	ADJD	ADJ	ADJD	0	O	O	0	0	mo	345
+348	1	2	27	18	und	KON	CONJ	KON	0	O	O	0	0	cd	345
+349	1	2	27	18	holte	VVFIN	VERB	VVFIN	0	O	O	0	0	cj	348
+350	1	2	27	18	den	ART	DET	ART	0	O	O	98	0	nk	352
+351	1	2	27	18	Fürsten	NN	ADJ	NN	0	O	O	98	0	nk	352
+352	1	2	27	18	Wassil	NE	NOUN	NE	PER	S-PER	S-PER	98	root	oa	349
+353	1	2	27	18	im	APPRART	ADP	APPRART	0	O	O	0	0	mo	349
+354	1	2	27	18	Vorzimmer	NN	NOUN	NN	0	O	O	99	root	nk	353
+355	1	2	27	18	ein	PTKVZ	PART	PTKVZ	0	O	O	0	0	svp	349
+356	1	2	27	18	.	$.	PUNCT	$.	0	O	O	0	0	punct	345
+357	1	2	28	18	»	NN	PUNCT	$(	0	O	O	0	0	punct	363
+358	1	2	28	19	Was	PIS	PRON	PWS	0	O	O	100	root	oa	363
+359	1	2	28	19	haben	VAFIN	AUX	VAFIN	0	O	O	0	0	ROOT	359
+360	1	2	28	19	Sie	PPER	PRON	PPER	0	O	O	101	root	sb	359
+361	1	2	28	19	mir	PPER	PRON	PPER	0	O	O	0	root	da	363
+362	1	2	28	19	zu	PTKZU	PART	PTKZU	0	O	O	0	0	pm	363
+363	1	2	28	19	sagen	VVINF	VERB	VVINF	0	O	O	0	0	oc	359
+364	1	2	28	19	,	$,	PUNCT	$,	0	O	O	0	0	punct	363
+365	1	2	28	19	Fürst	NN	NOUN	NN	0	S-PER	O	103	root	cj	359
+366	1	2	28	19	,	$,	PUNCT	$,	0	O	O	0	0	punct	365
+367	1	2	28	19	wegen	APPR	ADP	APPR	0	O	O	0	0	mo	359
+368	1	2	28	19	meines	PPOSAT	DET	PPOSAT	0	O	O	104	0	nk	369
+369	1	2	28	19	Boris	NE	PROPN	NN	0	S-PER	S-PER	104	root	nk	367
+370	1	2	28	19	?	$.	PUNCT	$.	0	O	O	0	0	punct	359
+371	1	2	29	20	Ich	PPER	PRON	PPER	0	O	O	105	root	sb	372
+372	1	2	29	20	kann	VMFIN	VERB	VMFIN	0	O	O	0	0	ROOT	372
+373	1	2	29	20	nicht	PTKNEG	PART	PTKNEG	0	O	O	0	0	ng	372
+374	1	2	29	20	länger	ADJD	ADJ	ADJD	0	O	O	0	0	mo	372
+375	1	2	29	20	in	APPR	ADP	APPR	0	O	O	0	0	mo	377
+376	1	2	29	20	Petersburg	NE	PROPN	NE	LOC	S-LOC	S-LOC	106	root	nk	375
+377	1	2	29	20	bleiben	VVINF	VERB	VVINF	0	O	O	0	0	oc	372
+378	1	2	29	20	.	$.	PUNCT	$.	0	O	O	0	0	punct	372
+379	1	2	30	21	Bitte	PTKANT	PART	NN	0	O	O	0	0	mo	381
+380	1	2	30	21	,	$,	PUNCT	$,	0	O	O	0	0	punct	381
+381	1	2	30	21	sprechen	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	381
+382	1	2	30	21	Sie	PPER	PRON	PPER	0	O	O	107	root	sb	381
+383	1	2	30	21	,	$,	PUNCT	$,	0	O	O	0	0	punct	381
+384	1	2	30	21	was	PRELS	PRON	PRELS	0	O	O	108	root	oa	389
+385	1	2	30	21	ich	PPER	PRON	PPER	0	O	O	0	root	sb	390
+386	1	2	30	21	meinem	PPOSAT	DET	PPOSAT	0	O	O	0	0	nk	388
+387	1	2	30	21	armen	ADJA	ADJ	ADJA	0	O	O	0	0	nk	388
+388	1	2	30	21	Sohne	NN	NOUN	NN	0	O	O	0	root	da	389
+389	1	2	30	21	sagen	VVINF	VERB	VVINF	0	O	O	0	0	oc	390
+390	1	2	30	21	kann	VMFIN	VERB	VMFIN	0	O	O	0	0	oc	381
+391	1	2	30	21	.	$.	PUNCT	$.	0	O	O	0	0	punct	381
+392	1	2	31	22	«	NN	PUNCT	$(	0	O	O	0	0	ROOT	392
+393	1	2	32	22	Ungeachtet	APPR	ADP	APPR	0	O	O	0	0	mo	407
+394	1	2	32	22	der	ART	DET	ART	0	O	O	111	0	nk	396
+395	1	2	32	22	sichtlichen	ADJA	ADJ	ADJA	0	O	O	111	0	nk	396
+396	1	2	32	22	Verdrießlichkeit	NN	NOUN	NN	0	O	O	111	root	nk	393
+397	1	2	32	22	und	KON	CONJ	KON	0	O	O	0	0	cd	396
+398	1	2	32	22	Unhöflichkeit	NN	NOUN	NN	0	O	O	112	root	cj	397
+399	1	2	32	22	,	$,	PUNCT	$,	0	O	O	0	0	punct	396
+400	1	2	32	22	mit	APPR	ADP	APPR	0	O	O	0	0	mo	405
+401	1	2	32	22	der	PRELS	PRON	PRELS	0	O	O	113	root	nk	400
+402	1	2	32	22	der	ART	DET	ART	0	O	O	0	0	nk	403
+403	1	2	32	22	Fürst	NN	NOUN	NN	0	O	O	0	root	sb	405
+404	1	2	32	22	sie	PPER	PRON	PPER	0	O	O	0	root	oa	405
+405	1	2	32	22	anhörte	VVFIN	VERB	VVFIN	0	O	O	0	0	rc	396
+406	1	2	32	22	,	$,	PUNCT	$,	0	O	O	0	0	punct	407
+407	1	2	32	22	lächelte	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	407
+408	1	2	32	22	sie	PPER	PRON	PPER	0	O	O	116	root	sb	407
+409	1	2	32	22	ihm	PPER	PRON	PPER	0	O	O	0	root	da	407
+410	1	2	32	22	zu	PTKVZ	PART	PTKVZ	0	O	O	0	0	svp	407
+411	1	2	32	22	und	KON	CONJ	KON	0	O	O	0	0	cd	407
+412	1	2	32	22	hielt	VVFIN	VERB	VVFIN	0	O	O	0	0	cj	411
+413	1	2	32	22	ihn	PPER	PRON	PPER	0	O	O	118	root	oa	412
+414	1	2	32	22	mit	APPR	ADP	APPR	0	O	O	0	0	mo	412
+415	1	2	32	22	der	ART	DET	ART	0	O	O	119	0	nk	416
+416	1	2	32	22	Hand	NN	NOUN	NN	0	O	O	119	root	nk	414
+417	1	2	32	22	zurück	PTKVZ	PART	PTKVZ	0	O	O	0	0	svp	412
+418	1	2	32	22	.	$.	PUNCT	$.	0	O	O	0	0	punct	407
+419	1	2	33	22	»	ADJA	PUNCT	$(	0	O	O	0	0	punct	421
+420	1	2	33	23	Es	NN	PRON	PPER	0	O	O	0	0	ph	421
+421	1	2	33	23	würde	VAFIN	AUX	VAFIN	0	O	O	0	0	ROOT	421
+422	1	2	33	23	Sie	PPER	PRON	PPER	0	O	O	120	root	sb	421
+423	1	2	33	23	nur	ADV	ADV	ADV	0	O	O	0	0	mo	425
+424	1	2	33	23	ein	ART	DET	ART	0	O	O	0	0	nk	425
+425	1	2	33	23	Wort	NN	NOUN	NN	0	O	O	0	root	oa	428
+426	1	2	33	23	beim	APPRART	ADP	APPRART	0	O	O	0	0	mnr	425
+427	1	2	33	23	Kaiser	NN	NOUN	NN	0	O	O	122	root	nk	426
+428	1	2	33	23	kosten	VVINF	VERB	VVINF	0	O	O	0	0	oc	421
+429	1	2	33	23	,	$,	PUNCT	$,	0	O	O	0	0	punct	428
+430	1	2	33	23	daß	KOUS	SCONJ	KOUS	0	O	O	0	0	cp	437
+431	1	2	33	23	er	PPER	PRON	PPER	0	O	O	123	root	sb	437
+432	1	2	33	23	direkt	ADJD	ADJ	ADJD	0	O	O	0	0	mo	436
+433	1	2	33	23	in	APPR	ADP	APPR	0	O	O	0	0	mo	436
+434	1	2	33	23	die	ART	DET	ART	0	O	O	124	0	nk	435
+435	1	2	33	23	Garde	NN	NOUN	NN	0	O	O	124	root	nk	433
+436	1	2	33	23	eintreten	VVINF	VERB	VVINF	0	O	O	0	0	oc	437
+437	1	2	33	23	könnte	VMFIN	VERB	VMFIN	0	O	O	0	0	oc	428
+438	1	2	33	23	.	$.	PUNCT	$.	0	O	O	0	0	punct	421
+439	1	2	34	23	«	ADJA	PUNCT	$(	0	O	O	0	0	punct	441
+440	1	2	34	23	»	ADJA	PUNCT	$(	0	O	O	0	0	punct	441
+441	1	2	34	23	Seien	NN	AUX	VAFIN	0	O	O	0	0	ROOT	441
+442	1	2	34	23	Sie	PPER	PRON	PPER	0	O	O	125	root	sb	441
+443	1	2	34	23	überzeugt	ADJD	VERB	VVPP	0	O	O	0	0	pd	441
+444	1	2	34	23	,	$,	PUNCT	$,	0	O	O	0	0	punct	443
+445	1	2	34	23	Fürstin	NN	NOUN	NN	0	O	O	126	root	pd	441
+446	1	2	34	23	,	$,	PUNCT	$,	0	O	O	0	0	punct	441
+447	1	2	34	23	daß	KOUS	SCONJ	KOUS	0	O	O	0	0	cp	451
+448	1	2	34	23	ich	PPER	PRON	PPER	0	O	O	127	root	sb	451
+449	1	2	34	23	alles	PIS	PRON	PIS	0	O	O	0	root	oa	450
+450	1	2	34	23	tun	VVINF	VERB	VVINF	0	O	O	0	0	oc	451
+451	1	2	34	23	werde	VAFIN	AUX	VAFIN	0	O	O	0	0	re	442
+452	1	2	34	23	,	$,	PUNCT	$,	0	O	O	0	0	punct	451
+453	1	2	34	23	was	PWS	PRON	PRELS	0	O	O	129	root	oa	455
+454	1	2	34	23	ich	PPER	PRON	PPER	0	O	O	0	root	sb	455
+455	1	2	34	23	kann	VMFIN	VERB	VMFIN	0	O	O	0	0	oc	450
+456	1	2	34	23	,	$,	PUNCT	$,	0	O	O	0	0	punct	441
+457	1	2	34	23	aber	KON	CONJ	KON	0	O	O	0	0	cd	441
+458	1	2	34	23	es	PPER	PRON	PPER	0	O	O	131	root	sb	459
+459	1	2	34	23	ist	VAFIN	AUX	VAFIN	0	O	O	0	0	cj	457
+460	1	2	34	23	schwierig	ADJD	ADJ	ADJD	0	O	O	0	0	pd	459
+461	1	2	34	23	,	$,	PUNCT	$,	0	O	O	0	0	punct	459
+462	1	2	34	23	Seine	PPOSAT	DET	PPOSAT	0	O	O	132	0	nk	463
+463	1	2	34	23	Majestät	NN	NOUN	NN	0	O	O	132	root	oa	466
+464	1	2	34	23	darum	PAV	ADV	PROAV	0	O	O	0	0	mo	466
+465	1	2	34	23	zu	PTKZU	PART	PTKZU	0	O	O	0	0	pm	466
+466	1	2	34	23	bitten	VVINF	VERB	VVINF	0	O	O	0	0	re	458
+467	1	2	34	23	.	$.	PUNCT	$.	0	O	O	0	0	punct	441
+468	1	2	35	24	Ich	PPER	PRON	PPER	0	O	O	133	root	sb	469
+469	1	2	35	24	möchte	VMFIN	VERB	VMFIN	0	O	O	0	0	ROOT	469
+470	1	2	35	24	Ihnen	PPER	PRON	PPER	0	O	O	134	root	da	471
+471	1	2	35	24	raten	VVINF	VERB	VVINF	0	O	O	0	0	oc	469
+472	1	2	35	24	,	$,	PUNCT	$,	0	O	O	0	0	punct	471
+473	1	2	35	24	sich	PRF	PRON	PRF	0	O	O	135	root	oa	478
+474	1	2	35	24	lieber	ADJD	ADV	ADJD	0	O	O	0	0	mo	478
+475	1	2	35	24	an	APPR	ADP	APPR	0	O	O	0	0	op	478
+476	1	2	35	24	Rumjanzow	NE	NOUN	NE	0	S-PER	S-PER	136	root	nk	475
+477	1	2	35	24	zu	PTKZU	PART	PTKZU	0	O	O	0	0	pm	478
+478	1	2	35	24	wenden	VVINF	VERB	VVINF	0	O	O	0	0	oc	471
+479	1	2	35	24	,	$,	PUNCT	$,	0	O	O	0	0	punct	469
+480	1	2	35	24	das	PDS	PRON	PDS	0	O	O	137	root	sb	481
+481	1	2	35	24	wäre	VAFIN	AUX	VAFIN	0	O	O	0	0	cj	469
+482	1	2	35	24	besser	ADJD	ADJ	ADJD	0	O	O	0	0	pd	481
+483	1	2	35	24	.	$.	PUNCT	$.	0	O	O	0	0	punct	469
+484	1	2	36	25	«	NN	PUNCT	$(	0	O	O	0	0	ROOT	484
+485	1	3	37	25	Die	ART	DET	ART	MISC	O	O	138	0	nk	487
+486	1	3	37	25	alte	ADJA	ADJ	ADJA	0	O	O	138	0	nk	487
+487	1	3	37	25	Dame	NN	NOUN	NN	0	O	O	138	root	sb	488
+488	1	3	37	25	war	VAFIN	AUX	VAFIN	0	O	O	0	0	ROOT	488
+489	1	3	37	25	die	ART	DET	ART	0	O	O	139	0	nk	490
+490	1	3	37	25	Fürstin	NN	NOUN	NN	0	O	O	139	root	pd	488
+491	1	3	37	25	Drubezkoi	NN	PROPN	NE	PER	S-PER	S-PER	0	root	ag	490
+492	1	3	37	25	und	KON	CONJ	KON	0	O	O	0	0	cd	488
+493	1	3	37	25	gehörte	VVFIN	VERB	VVFIN	0	O	O	0	0	cj	492
+494	1	3	37	25	einer	PIS	PRON	PIS	0	O	O	141	root	oa	493
+495	1	3	37	25	der	ART	DET	ART	0	O	O	0	0	nk	497
+496	1	3	37	25	ersten	ADJA	ADJ	ADJA	0	O	O	0	0	nk	497
+497	1	3	37	25	Familien	NN	NOUN	NN	0	O	O	0	root	ag	494
+498	1	3	37	25	Rußlands	NE	PROPN	NE	0	S-LOC	S-LOC	0	root	ag	497
+499	1	3	37	25	an	PTKVZ	PART	PTKVZ	0	O	O	0	0	svp	493
+500	1	3	37	25	,	$,	PUNCT	$,	0	O	O	0	0	punct	488
+501	1	3	37	25	aber	KON	CONJ	KON	0	O	O	0	0	cd	488
+502	1	3	37	25	sie	PPER	PRON	PPER	0	O	O	144	root	sb	503
+503	1	3	37	25	lebte	VVFIN	VERB	VVFIN	0	O	O	0	0	cj	501
+504	1	3	37	25	in	APPR	ADP	APPR	0	O	O	0	0	mo	503
+505	1	3	37	25	Armut	NN	NOUN	NN	0	O	O	145	root	nk	504
+506	1	3	37	25	und	KON	CONJ	KON	0	O	O	0	0	cd	505
+507	1	3	37	25	Zurückgezogenheit	NN	NOUN	NN	0	O	O	146	root	cj	506
+508	1	3	37	25	und	KON	CONJ	KON	0	O	O	0	0	cd	503
+509	1	3	37	25	hatte	VAFIN	AUX	VAFIN	0	O	O	0	0	cj	508
+510	1	3	37	25	alle	PIAT	DET	PIDAT	0	O	O	147	0	nk	512
+511	1	3	37	25	früheren	ADJA	ADJ	ADJA	0	O	O	147	0	nk	512
+512	1	3	37	25	Verbindungen	NN	NOUN	NN	0	O	O	147	root	oa	513
+513	1	3	37	25	verloren	VVPP	VERB	VVPP	0	O	O	0	0	oc	509
+514	1	3	37	25	.	$.	PUNCT	$.	0	O	O	0	0	punct	488
+515	1	3	38	26	Sie	PPER	PRON	PPER	0	O	O	148	root	sb	516
+516	1	3	38	26	war	VAFIN	AUX	VAFIN	0	O	O	0	0	ROOT	516
+517	1	3	38	26	nur	ADV	ADV	ADV	0	O	O	0	0	mo	518
+518	1	3	38	26	nach	APPR	ADP	APPR	0	O	O	0	0	mo	520
+519	1	3	38	26	Petersburg	NE	PROPN	NE	LOC	S-LOC	S-LOC	149	root	nk	518
+520	1	3	38	26	gekommen	VVPP	VERB	VVPP	0	O	O	0	0	oc	516
+521	1	3	38	26	,	$,	PUNCT	$,	0	O	O	0	0	punct	520
+522	1	3	38	26	um	KOUI	SCONJ	KOUI	0	O	O	0	0	cp	528
+523	1	3	38	26	ihren	PPOSAT	DET	PPOSAT	0	O	O	150	0	nk	524
+524	1	3	38	26	Sohn	NN	NOUN	NN	PER	O	O	150	root	oa	528
+525	1	3	38	26	in	APPR	ADP	APPR	0	O	O	0	0	mo	528
+526	1	3	38	26	der	ART	DET	ART	0	O	O	151	0	nk	527
+527	1	3	38	26	Garde	NN	NOUN	NN	0	O	O	151	root	nk	525
+528	1	3	38	26	unterzubringen	VVIZU	VERB	VVIZU	0	O	O	0	0	mo	520
+529	1	3	38	26	,	$,	PUNCT	$,	0	O	O	0	0	punct	516
+530	1	3	38	26	und	KON	CONJ	KON	0	O	O	0	0	cd	516
+531	1	3	38	26	in	APPR	ADP	APPR	0	O	O	0	0	mo	545
+532	1	3	38	26	der	ART	DET	ART	0	O	O	152	0	nk	533
+533	1	3	38	26	Hoffnung	NN	NOUN	NN	0	O	O	152	root	nk	531
+534	1	3	38	26	,	$,	PUNCT	$,	0	O	O	0	0	punct	533
+535	1	3	38	26	dem	ART	DET	ART	0	O	O	153	0	nk	537
+536	1	3	38	26	Fürsten	NN	ADJ	NN	0	O	O	153	0	nk	537
+537	1	3	38	26	Wassil	NE	NOUN	NE	PER	S-PER	S-PER	153	root	da	539
+538	1	3	38	26	zu	PTKZU	PART	PTKZU	0	O	O	0	0	pm	539
+539	1	3	38	26	begegnen	VVINF	VERB	VVINF	0	O	O	0	0	oc	533
+540	1	3	38	26	,	$,	PUNCT	$,	0	O	O	0	0	punct	541
+541	1	3	38	26	hatte	VAFIN	AUX	VAFIN	0	O	O	0	0	cj	530
+542	1	3	38	26	sie	PPER	PRON	PPER	0	O	O	154	root	sb	541
+543	1	3	38	26	diese	PDAT	DET	PDAT	0	O	O	0	0	nk	544
+544	1	3	38	26	Soiree	NN	NOUN	NN	0	O	O	0	root	oa	545
+545	1	3	38	26	besucht	VVPP	VERB	VVPP	0	O	O	0	0	oc	541
+546	1	3	38	26	.	$.	PUNCT	$.	0	O	O	0	0	punct	516
+547	1	3	39	27	Ihr	PPOSAT	PRON	PPOSAT	0	O	O	156	root	nk	550
+548	1	3	39	27	einst	ADV	ADV	ADV	0	O	O	0	0	mo	549
+549	1	3	39	27	schönes	ADJA	ADJ	ADJA	0	O	O	0	0	nk	550
+550	1	3	39	27	Gesicht	NN	NOUN	NN	0	O	O	0	root	sb	551
+551	1	3	39	27	drückte	VVFIN	VERB	VVFIN	0	O	O	0	0	ROOT	551
+552	1	3	39	27	lebhaften	ADJA	ADJ	ADJA	0	O	O	158	0	nk	553
+553	1	3	39	27	Verdruß	NN	NOUN	NN	PER	O	O	158	root	sb	551
+554	1	3	39	27	aus	PTKVZ	PART	PTKVZ	0	O	O	0	0	svp	551
+555	1	3	39	27	,	$,	PUNCT	$,	0	O	O	0	0	punct	551
+556	1	3	39	27	aber	KON	CONJ	KON	0	O	O	0	0	cd	551
+557	1	3	39	27	dann	ADV	ADV	ADV	0	O	O	0	0	mo	558
+558	1	3	39	27	lächelte	VVFIN	VERB	VVFIN	0	O	O	0	0	cj	556
+559	1	3	39	27	sie	PPER	PRON	PPER	0	O	O	159	root	sb	558
+560	1	3	39	27	wieder	ADV	ADV	ADV	0	O	O	0	0	mo	558
+561	1	3	39	27	und	KON	CONJ	KON	0	O	O	0	0	cd	558
+562	1	3	39	27	ergriff	VVFIN	VERB	VVFIN	0	O	O	0	0	cj	561
+563	1	3	39	27	den	ART	DET	ART	0	O	O	160	0	nk	564
+564	1	3	39	27	Arm	NN	NOUN	NN	0	O	O	160	root	oa	562
+565	1	3	39	27	des	ART	DET	ART	0	O	O	0	0	nk	566
+566	1	3	39	27	Fürsten	NN	NOUN	NN	0	O	O	0	root	ag	564
+567	1	3	39	27	noch	ADV	ADV	ADV	0	O	O	0	0	mo	558
+568	1	3	39	27	kräftiger	ADJD	ADJ	ADJD	0	O	O	0	0	mo	558
+569	1	3	39	27	.	$.	PUNCT	$.	0	O	O	0	0	punct	551
