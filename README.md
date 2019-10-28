@@ -49,7 +49,7 @@ NLP Pipeline for German literary texts (under development)
 # Analysis Tools
 # Requirements
 TreeTagger <br>
-python >= 3.6
+python >= 3.7
 * spacy
 * treetaggerwrapper
 * pandas
