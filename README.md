@@ -34,7 +34,7 @@ NLP Pipeline for German literary texts (under development)
 ## Morphological Tagger
 * DEMorphy (not yet)
 ## Named Entity Recognition (fine-grained)
-* Flair (not yet)
+* Flair (done)
 * S. Pado NER (not yet)
 ## Dependency Parsing
 * spacy (not yet)
