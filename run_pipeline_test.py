@@ -15,6 +15,7 @@ from lemmatizer.tt_lemma import lemma_tt
 from postagger.someweta_pos import smwt_pos
 from NER.nerspacy import sp_ner
 from NER.nerflair import flair_ner_base, flair_ner_fine
+from morphology.morph_marmot import morph_marmot
 from dependency.depspacy import spdep
 import pandas as pd
 
@@ -77,6 +78,8 @@ for tokenizer_choice in tokenizers:
     sentences_spacy = sent_sp(tokens)
     sentences_smo = sent_smo(tokens)
     sentences_smo = align_token_sentence(sentences_smo)
+    # morphology
+    case_marmot, number_marmot, gender_marmot, person_marmot, tense_marmot, mood_marmot, degree_marmot = morph_marmot(tokens, sentences_smo)
 
     # pos tagger
     pos_treetagger = tagpos_tt(tokens)
@@ -122,5 +125,13 @@ for tokenizer_choice in tokenizers:
     table["noun_chunk_root_spacy"] = noun_chunks_root
     table["dependency_tag_spacy"] = spdep
     table["dependency_head_spacy"] = sphead
-    
+
+    table["case_marmot"] = case_marmot
+    table["number_marmot"] = number_marmot
+    table["gender_marmot"] = gender_marmot
+    table["person_marmot"] = person_marmot
+    table["tense_marmot"] = tense_marmot
+    table["mood_marmot"] = mood_marmot
+    table["degree_marmot"] = degree_marmot
+
     table.to_csv(tokenizer_choice+"_"+output, sep="\t")
