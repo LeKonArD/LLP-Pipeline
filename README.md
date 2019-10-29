@@ -34,6 +34,7 @@ NLP Pipeline for German literary texts (under development)
 * StanfordNLP (not yet)
 ## Morphological Tagger
 * DEMorphy (not yet, python<3.7, but flair python>=3.7)
+* Marmot (done)
 ## Named Entity Recognition
 * Flair (done)
 * spacy (done)
