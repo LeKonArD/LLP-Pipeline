@@ -1,62 +1,66 @@
 # LLP-Pipeline
 NLP Pipeline for German literary texts (under development)
+
 ## Structure
-### Paragraphs
-* TEI Parser (not yet)
+
+### Chapters and Paragraphs
+* TEI Parser (done)
 * Rule based (done)
-### Chapters
-* TEI Parser (not yet)
-* Rule based (done)
+
 ## Tokenization
 * TreeTagger (done)
 * SoMaJo (done)
-* Flair (==segtok==nicht geeignet, not yet)
-* spaCy (done, + remove linebreaks)
-## Chunking
-* spaCy (done)
+* Syntok (done)
+<!-- * spaCy (done, + remove linebreaks), identisch zu syntok -->
+
+<!-- ## Chunking
+wäre mit einer geeigneten Dependenzgrammatik redundant
+* spaCy (done) -->
+
 ## Sentence Splitting
 * SpaCy (done)
 * SoMaJo (done)
-* Flair (not yet, siehe Tokenizer)
-## Lemmatization
-* TreeTagger (done)
-* RNNTagger (not yet)
-* GermaLemma (done)
-* SMORLemma (not yet)
-* spaCy (too bad)
+* Syntok (done)
+
 ## Part-of-Speech Tagger
 * TreeTagger (done)
-* RNNTagger (not yet)
-* clevertagger (not yet)
+* RNNTagger (done)
+<!-- * clevertagger (not yet); veraltet, keine vortrainierten Modelle -->
+* Marmot (done)
 * flair (done)
 * spacy (done)
-* SoMeWeTa (done, get model: <a href="https://github.com/tsproisl/SoMeWeTa#model-files">link</a>)
-* StanfordNLP (not yet)
+* SoMeWeTa (done)
+* StanfordNLP (done)
+
+## Lemmatization
+* TreeTagger (done)
+* RNNTagger (done)
+* GermaLemma (done)
+* Zmorge (done)
+* spaCy (done)
+* DEMorphy (done)
+
 ## Morphological Tagger
-* DEMorphy (not yet, python<3.7, but flair python>=3.7)
+* DEMorphy (done)
 * Marmot (done)
+
 ## Named Entity Recognition
 * Flair (done)
 * spacy (done)
-* S. Pado NER (not yet)
+* S. Pado NER (not yet) <!-- what? -->
+
 ## Dependency Parsing
 * spacy (done)
 * parZu (not yet)
-* StanfordNLP (not yet)
+* StanfordNLP (done)
 * Parsey McPasresface (not yet)
-## Semantic Role Labeling
-* mateplus (not yet)
-## Corefence Resolution
-* CorZu (not yet)
+
 # Evaluation
 # Analysis Tools
 # Requirements
-TreeTagger <br>
-python >= 3.7
-* spacy
-* treetaggerwrapper
-* pandas
-* SoMeWeTa
-* SoMaJo
-* germalemma
-* flair
+<!-- * TreeTagger
+* Marmot 
+* Zmorge -->
+* python >= 3.7
+  * see `requirements.txt` for required packages
+# Installation
