@@ -5,9 +5,7 @@ from llppipeline.base import PipelineModule
 
 class Marmot(PipelineModule):
 
-    def __init__(self, token_prereq, sent_prereq, jarfile='resources/marmot-2015-10-22.jar', modelfile='resources/de.marmot'):
-        self.token_prereq = token_prereq
-        self.sent_prereq = sent_prereq
+    def __init__(self, jarfile='resources/marmot-2015-10-22.jar', modelfile='resources/de.marmot'):
         self.jarfile = jarfile
         self.modelfile = modelfile
 
@@ -15,11 +13,11 @@ class Marmot(PipelineModule):
         return {'morphology-marmot', 'pos-marmot'}
 
     def prerequisites(self):
-        return {self.token_prereq, self.sent_prereq}
+        return {'token', 'sentence'}
 
     def make(self, prerequisite_data):
-        tokens = prerequisite_data[self.token_prereq]
-        sentences = prerequisite_data[self.sent_prereq]
+        tokens = prerequisite_data['token']
+        sentences = prerequisite_data['sentence']
 
         if not os.path.exists("temp"):
             os.mkdir("temp")

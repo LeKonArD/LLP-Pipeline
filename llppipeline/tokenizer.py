@@ -6,7 +6,7 @@ from llppipeline.base import PipelineModule
 class SoMaJo(PipelineModule):
 
     def targets(self):
-        return {'token-somajo', 'sentence-somajo'}
+        return {'token-somajo', 'sentence-somajo', 'token', 'sentence'}
 
     def prerequisites(self):
         return {'paragraph'}
@@ -23,13 +23,13 @@ class SoMaJo(PipelineModule):
             tokens += [token.text for token in s]
             sentence_alignment += [i] * len(s)
 
-        return {'token-somajo': tokens, 'sentence-somajo': sentence_alignment}
+        return {'token-somajo': tokens, 'sentence-somajo': sentence_alignment, 'token': tokens, 'sentence': sentence_alignment}
 
 
 class Syntok(PipelineModule):
 
     def targets(self):
-        return {'token-syntok', 'sentence-syntok'}
+        return {'token-syntok', 'sentence-syntok', 'token', 'sentence'}
 
     def prerequisites(self):
         return {'paragraph'}
@@ -47,4 +47,4 @@ class Syntok(PipelineModule):
                 sentence_alignment += [sent_num] * len(s)
                 sent_num = sent_num + 1
 
-        return {'token-syntok': tokens, 'sentence-syntok': sentence_alignment}
+        return {'token-syntok': tokens, 'sentence-syntok': sentence_alignment, 'token': tokens, 'sentence': sentence_alignment}

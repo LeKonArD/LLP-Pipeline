@@ -5,8 +5,7 @@ import re
 
 class GermaLemma(PipelineModule):
 
-    def __init__(self, token_prereq, pos_prereq):
-        self.token_prereq = token_prereq
+    def __init__(self, pos_prereq):
         self.pos_prereq = pos_prereq
         self.lemmatizer = GermaLemma(tiger_corpus = 'resources/tiger_release_aug07.corrected.16012013.conll09')
 
@@ -14,10 +13,10 @@ class GermaLemma(PipelineModule):
         return {'lemma-germalemma'}
 
     def prerequisites(self):
-        return {self.token_prereq, self.pos_prereq}
+        return {'token', self.pos_prereq}
 
     def make(self, prerequisite_data):
-        tokens = prerequisite_data[self.token_prereq]
+        tokens = prerequisite_data['token']
         pos = prerequisite_data[self.pos_prereq]
 
         pattern1 = re.compile("^[NV]")

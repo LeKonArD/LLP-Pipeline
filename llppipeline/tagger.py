@@ -12,18 +12,17 @@ from .util.smor_getpos import get_true_pos
 
 class TreeTagger(PipelineModule):
 
-    def __init__(self, token_prereq):
+    def __init__(self):
         self.tt = treetaggerwrapper.TreeTagger(TAGLANG="de")
-        self.token_prereq = token_prereq
 
     def targets(self):
         return {'lemma-treetagger', 'pos-treetagger'}
 
     def prerequisites(self):
-        return {self.token_prereq}
+        return {'token'}
 
     def make(self, prerequisite_data):
-        tokens = prerequisite_data[self.token_prereq]
+        tokens = prerequisite_data['token']
         tagged = self.tt.tag_text(tokens, tagonly=True)
         return {
             'lemma-treetagger': [x.split("\t")[2] for x in tagged],
@@ -32,21 +31,19 @@ class TreeTagger(PipelineModule):
 
 class SoMeWeTa(PipelineModule):
 
-    def __init__(self, token_prereq, sent_prereq, model='resources/german_newspaper_2018-12-21.model'):
+    def __init__(self, model='resources/german_newspaper_2018-12-21.model'):
         self.asptagger = ASPTagger()
         self.asptagger.load(model)
-        self.token_prereq = token_prereq
-        self.sent_prereq = sent_prereq
 
     def targets(self):
         return {'pos-someweta'}
 
     def prerequisites(self):
-        return {self.token_prereq, self.sent_prereq}
+        return {'token', 'sentence'}
 
     def make(self, prerequisite_data):
-        tokens = prerequisite_data[self.token_prereq]
-        sentences = prerequisite_data[self.sent_prereq]
+        tokens = prerequisite_data['token']
+        sentences = prerequisite_data['sentence']
 
         sent_end = 0
         tagged_sentences = []
@@ -65,19 +62,15 @@ class SoMeWeTa(PipelineModule):
 
 class RNNTagger(PipelineModule):
 
-    def __init__(self, token_prereq, sent_prereq):
-        self.token_prereq = token_prereq
-        self.sent_prereq = sent_prereq
-
     def targets(self):
         return {'pos-rnntagger', 'morphology-rnntagger', 'lemma-rnntagger'}
 
     def prerequisites(self):
-        return {self.token_prereq, self.sent_prereq}
+        return {'token', 'sentence'}
 
     def make(self, prerequisite_data):
-        tokens = prerequisite_data[self.token_prereq]
-        sentences = prerequisite_data[self.sent_prereq]
+        tokens = prerequisite_data['token']
+        sentences = prerequisite_data['sentence']
 
         if not os.path.exists("temp"):
             os.mkdir("temp")
@@ -123,9 +116,7 @@ class RNNTagger(PipelineModule):
 # code cited from Rico Sennrich et al.: clevertagger (https://github.com/rsennrich/clevertagger)
 class Clevertagger(PipelineModule):
 
-    def __init__(self, token_prereq, sent_prereq, smor_prereq):
-        self.token_prereq = token_prereq
-        self.sent_prereq = sent_prereq
+    def __init__(self, smor_prereq):
         self.smor_prereq = smor_prereq
         self.crf_model = './resources/hdt_ab.zmorge-20140521-smor_newlemma.model'
         self.crf_backend_exec = './resources/wapiti'
@@ -137,11 +128,11 @@ class Clevertagger(PipelineModule):
         return {'pos-clevertagger'}
 
     def prerequisites(self):
-        return {self.token_prereq, self.sent_prereq, self.smor_prereq}
+        return {'token', 'sentence', self.smor_prereq}
 
     def make(self, prerequisite_data):
-        tokens = prerequisite_data[self.token_prereq]
-        sents = prerequisite_data[self.sent_prereq]
+        tokens = prerequisite_data['token']
+        sents = prerequisite_data['sentence']
         smor = prerequisite_data[self.smor_prereq]
 
         tagger_args = ['label', '-m', self.crf_model]

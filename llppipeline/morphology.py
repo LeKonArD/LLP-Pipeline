@@ -5,8 +5,7 @@ import demorphy
 
 class Zmorge(PipelineModule):
 
-    def __init__(self, token_prereq, transducer='resources/fst-infl2', modelfile='resources/zmorge-20150315-smor_newlemma.ca'):
-        self.token_prereq = token_prereq
+    def __init__(self, transducer='resources/fst-infl2', modelfile='resources/zmorge-20150315-smor_newlemma.ca'):
         self.transducer = transducer
         self.modelfile = modelfile
 
@@ -14,10 +13,10 @@ class Zmorge(PipelineModule):
         return {'lemma-zmorge', 'morphology-zmorge'}
 
     def prerequisites(self):
-        return {self.token_prereq}
+        return {'token'}
 
     def make(self, prerequisite_data):
-        tokens = prerequisite_data[self.token_prereq]
+        tokens = prerequisite_data['token']
         input_str = '\n'.join(tokens) + '\n'
 
         process = subprocess.run([self.transducer, self.modelfile], input=input_str, text=True, capture_output=True)
@@ -47,17 +46,14 @@ class Zmorge(PipelineModule):
 
 class DEMorphy(PipelineModule):
 
-    def __init__(self, token_prereq):
-        self.token_prereq = token_prereq
-
     def targets(self):
         return {'morphology-demorphy'}
 
     def prerequisites(self):
-        return {self.token_prereq}
+        return {'token'}
 
     def make(self, prerequisite_data):
-        tokens = prerequisite_data[self.token_prereq]
+        tokens = prerequisite_data['token']
         analyzer = demorphy.Analyzer(char_subs_allowed=True)
 
         morph_output = list(map(lambda tok: list(analyzer.analyze(tok)), tokens))

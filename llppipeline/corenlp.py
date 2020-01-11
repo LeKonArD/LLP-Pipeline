@@ -4,22 +4,21 @@ import os
 
 class CoreNLP(PipelineModule):
 
-    def __init__(self, token_prereq, classpath='resources/stanford-corenlp-full-2018-10-05/*'):
-        self.token_prereq = token_prereq
+    def __init__(self, classpath='resources/stanford-corenlp-full-2018-10-05/*'):
         self.classpath = classpath
 
     def targets(self):
         return {'pos-corenlp', 'syntax-corenlp', 'entities-corenlp', 'sentence-corenlp'}
 
     def prerequisites(self):
-        return {self.token_prereq}
+        return {'token'}
 
     def make(self, prerequisite_data):
         if not os.path.exists("temp"):
             os.mkdir("temp")
 
         with open("temp/corenlp_input", 'w') as f:
-            for tok in prerequisite_data[self.token_prereq]:
+            for tok in prerequisite_data['token']:
                 f.write(tok + '\n')
 
         subprocess.run("java -cp \"%s\" -mx8g edu.stanford.nlp.pipeline.StanfordCoreNLP "

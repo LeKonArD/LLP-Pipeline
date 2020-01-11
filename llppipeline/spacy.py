@@ -4,19 +4,16 @@ from spacy.tokens import Doc
 
 class Spacy(PipelineModule):
 
-    def __init__(self, token_prereq):
-        self.token_prereq = token_prereq
-
     def targets(self):
         return {'lemma-spacy', 'pos-spacy', 'syntax-spacy', 'entity-spacy'}
 
     def prerequisites(self):
-        return {self.token_prereq}
+        return {'token'}
 
     def make(self, prerequisite_data):
         nlp = spacy.load("de_core_news_sm")
 
-        nlp.tokenizer = lambda x: Doc(nlp.vocab, words=prerequisite_data[self.token_prereq])
+        nlp.tokenizer = lambda x: Doc(nlp.vocab, words=prerequisite_data['token'])
         doc = nlp('')
 
         ner_out = len(doc) * ["_"];
