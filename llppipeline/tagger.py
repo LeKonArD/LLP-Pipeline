@@ -49,7 +49,7 @@ class SoMeWeTa(PipelineModule):
         sentences = prerequisite_data[self.sent_prereq]
 
         sent_end = 0
-        input = []
+        tagged_sentences = []
 
         while sent_end < len(sentences):
             sent_start = sent_end
@@ -57,11 +57,10 @@ class SoMeWeTa(PipelineModule):
             while sent_end < len(sentences) and sentences[sent_start] == sentences[sent_end]:
                 sent_end += 1
 
-            input += [tokens[sent_start:sent_end]]
+            tagged_sentences += [self.asptagger.tag_sentence(tokens[sent_start:sent_end])]
 
-        tagged_sentences = self.asptagger.tag(input)
         return {
-            'pos-someweta': [t for sent in tagged_sentences for t in sent]
+            'pos-someweta': [t[1] for sent in tagged_sentences for t in sent]
         }
 
 class RNNTagger(PipelineModule):

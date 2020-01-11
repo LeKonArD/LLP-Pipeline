@@ -8,7 +8,7 @@ class Spacy(PipelineModule):
         self.token_prereq = token_prereq
 
     def targets(self):
-        return {'morphology-spacy', 'lemma-spacy', 'pos-spacy', 'syntax-spacy', 'entity-spacy'}
+        return {'lemma-spacy', 'pos-spacy', 'syntax-spacy', 'entity-spacy'}
 
     def prerequisites(self):
         return {self.token_prereq}
@@ -27,7 +27,6 @@ class Spacy(PipelineModule):
         return {
             'pos-spacy': [token.tag_ for token in doc],
             'lemma-spacy': [token.lemma_ for token in doc],
-            'morphology-spacy': [token.tag_ for token in doc],
             'syntax-spacy': [(token.dep_, token.head.i - token.i) for token in doc],
             'entity-spacy': ner_out
         }

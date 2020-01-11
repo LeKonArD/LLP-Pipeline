@@ -11,36 +11,39 @@ class Zmorge(PipelineModule):
         self.modelfile = modelfile
 
     def targets(self):
-        raise {'morphology-zmorge'}
+        return {'lemma-zmorge', 'morphology-zmorge'}
 
     def prerequisites(self):
-        raise {self.token_prereq}
+        return {self.token_prereq}
 
     def make(self, prerequisite_data):
         tokens = prerequisite_data[self.token_prereq]
-        input_str = tokens.join("\n")
+        input_str = '\n'.join(tokens) + '\n'
 
-        process = subprocess.run([self.transducer, self.modelfile], text=True, capture_output=True)
+        process = subprocess.run([self.transducer, self.modelfile], input=input_str, text=True, capture_output=True)
         lines = process.stdout.split("\n")
         pat = re.compile("^> ")
         negative = re.compile("^no result for")
 
         infls = []
         morph_output = []
+        it = iter(lines)
         while True:
             try:
-                while not pat.match(next(lines)):
-                    infl = next(lines)
+                infl = next(it)
+                while not pat.match(infl):
                     if not negative.match(infl):
                         infls += [infl]
+                    infl = next(it)
 
                 morph_output += [infls]
                 infls = []
             except StopIteration:
+                morph_output += [infls]
                 break
 
 
-        return {'morphology-zmorge': morph_output}
+        return {'morphology-zmorge': morph_output[1:]}
 
 class DEMorphy(PipelineModule):
 
@@ -48,10 +51,10 @@ class DEMorphy(PipelineModule):
         self.token_prereq = token_prereq
 
     def targets(self):
-        raise {'morphology-demorphy'}
+        return {'morphology-demorphy'}
 
     def prerequisites(self):
-        raise {self.token_prereq}
+        return {self.token_prereq}
 
     def make(self, prerequisite_data):
         tokens = prerequisite_data[self.token_prereq]

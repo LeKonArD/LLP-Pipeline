@@ -1,4 +1,5 @@
 import igraph
+import sys
 
 
 class Pipeline:
@@ -8,6 +9,7 @@ class Pipeline:
         self.targets = set()
 
     def register_module(self, module):
+        print("Loading module %s" % module, file=sys.stderr)
         self.modules.append(module)
         self.targets = self.targets.union(module.prerequisites())
         self.targets = self.targets.union(module.targets())
@@ -44,12 +46,12 @@ class Pipeline:
         # compute evaluation order, e.g. topological sorting
         evaluation = subgraph.vs[subgraph.topological_sorting()]
 
-        print('Evaluation order:')
+        print('Evaluation order:', file=sys.stderr)
         for node in evaluation:
             if not node['module']:
                 continue
-            print('\t' + str(node['module']))
-        print()
+            print('\t' + str(node['module']), file=sys.stderr)
+        print(file=sys.stderr)
 
 
         results = {}
@@ -58,7 +60,7 @@ class Pipeline:
                 continue
 
             module = node['module']
-            print('Evaluating ' + str(module))
+            print('Evaluating ' + str(module), file=sys.stderr)
             prerequisites = {key:results[key] for key in module.prerequisites()}
             targets_data = module.make(prerequisites)
             results.update(targets_data)
