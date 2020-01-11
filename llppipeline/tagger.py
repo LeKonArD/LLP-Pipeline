@@ -4,8 +4,11 @@ from someweta import ASPTagger
 import treetaggerwrapper
 import os
 import subprocess
+import pexpect
 import sys
 import re
+
+from .util.smor_getpos import get_true_pos
 
 class TreeTagger(PipelineModule):
 
@@ -116,3 +119,117 @@ class RNNTagger(PipelineModule):
             lemma += [fields[2]]
 
         return {'pos-rnntagger': pos, 'morphology-rnntagger': morph, 'lemma-rnntagger': lemma}
+
+
+# code cited from Rico Sennrich et al.: clevertagger (https://github.com/rsennrich/clevertagger)
+class Clevertagger(PipelineModule):
+
+    def __init__(self, token_prereq, sent_prereq, smor_prereq):
+        self.token_prereq = token_prereq
+        self.sent_prereq = sent_prereq
+        self.smor_prereq = smor_prereq
+        self.crf_model = './resources/hdt_ab.zmorge-20140521-smor_newlemma.model'
+        self.crf_backend_exec = './resources/wapiti'
+
+        self.alphnum = re.compile(r'^(?:\w|\d|-)+$', re.U)
+        self.re_mainclass = re.compile(u'<\+(.*?)>')
+
+    def targets(self):
+        return {'pos-clevertagger'}
+
+    def prerequisites(self):
+        return {self.token_prereq, self.sent_prereq, self.smor_prereq}
+
+    def make(self, prerequisite_data):
+        tokens = prerequisite_data[self.token_prereq]
+        sents = prerequisite_data[self.sent_prereq]
+        smor = prerequisite_data[self.smor_prereq]
+
+        tagger_args = ['label', '-m', self.crf_model]
+        tagger = pexpect.spawn(self.crf_backend_exec, tagger_args, echo=False, encoding='utf-8')
+        tagger.delaybeforesend = 0
+
+        # get some initial output
+        tagger.expect_exact('* Load model\r\n* Label sequences\r\n')
+
+        # convert SMOR output to posset
+        possets = list(map(lambda tags: self._convert_smor(tags), smor))
+
+        # preprocess each sentence
+        preprocessed = ['']
+        sentid = sents[0]
+        for i in range(len(tokens)):
+            if sents[i] != sentid:
+                preprocessed += ['']
+
+            preprocessed[-1] = preprocessed[-1] + self._create_features(tokens[i], possets[i])
+
+        # main tagging step with wapiti
+        out = self._process_by_sentence(tagger, preprocessed)
+
+        return {
+            'pos-clevertagger': [line.split('\t')[14] for sentence in out for line in sentence]
+        }
+
+    def _convert_smor(self, smortags):
+        posset = []
+        for line in smortags:
+            try:
+                raw_pos = self.re_mainclass.search(line).group(1)
+            except:
+                continue
+
+            pos, pos2 = get_true_pos(raw_pos, line)
+
+            if pos:
+                posset.append(pos)
+            if pos2:
+                posset.append(pos2)
+
+        return posset
+
+    def _create_features(self, word, posset):
+        """Create list of features for each word"""
+
+        pos = []
+
+        # feature: is word uppercased?
+        if word[0].isupper():
+            feature_upper = 'uc'
+        else:
+            feature_upper = 'lc'
+
+        # feature: is word alphanumeric?
+        if self.alphnum.search(word[0]):
+            feature_alnum = 'y'
+        else:
+            feature_alnum = 'n'
+
+        # feature: list of possible part of speech tags
+        pos = sorted(posset)+['ZZZ']*10
+        posstring = '\t'.join(pos[:10])
+
+        outstring = ("{w}\t{wlower}\t{upper}\t{alnum}\t{pos}".format(w=word, wlower=word.lower(), upper=feature_upper, pos=posstring, alnum=feature_alnum))
+
+        return outstring+'\n'
+
+    def _process_by_sentence(self, processor, preprocessed):
+        sentences_out = []
+        for sentence in preprocessed:
+            if not sentence:
+                continue
+            words = []
+            processor.send(sentence + '\n')
+            while True:
+                word = processor.readline().strip()
+                # hack for Wapiti stderr
+                if word.endswith('sequences labeled'):
+                    continue
+                elif word:
+                    words.append(word)
+                else:
+                    break
+            sentences_out.append(words)
+
+        return sentences_out
+
