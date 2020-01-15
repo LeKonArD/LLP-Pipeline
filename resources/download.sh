@@ -18,6 +18,17 @@ if [ ! -f "tiger_release_aug07.corrected.16012013.conll09" ]; then
 fi
 
 #
+# TreeTagger
+#
+$WGET 'https://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/tree-tagger-linux-3.2.2.tar.gz'
+$WGET 'https://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/tagger-scripts.tar.gz'
+$WGET 'https://www.cis.uni-muenchen.de/~schmid/tools/TreeTagger/data/german.par.gz'
+mkdir treetagger
+tar -C treetagger -xvf tree-tagger-linux-3.2.2.tar.gz
+tar -C treetagger -xvf tagger-scripts.tar.gz
+gunzip -c german.par.gz > treetagger/german.par
+
+#
 # marmot
 #
 $WGET 'http://cistern.cis.lmu.de/marmot/bin/CURRENT/marmot-2015-10-22.jar'

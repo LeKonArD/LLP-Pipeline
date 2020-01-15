@@ -1,7 +1,6 @@
 from llppipeline.base import PipelineModule
 
 from someweta import ASPTagger
-import treetaggerwrapper
 import os
 import subprocess
 import pexpect
@@ -12,9 +11,6 @@ from .util.smor_getpos import get_true_pos
 
 class TreeTagger(PipelineModule):
 
-    def __init__(self):
-        self.tt = treetaggerwrapper.TreeTagger(TAGLANG="de")
-
     def targets(self):
         return {'lemma-treetagger', 'pos-treetagger'}
 
@@ -23,11 +19,21 @@ class TreeTagger(PipelineModule):
 
     def make(self, prerequisite_data):
         tokens = prerequisite_data['token']
-        tagged = self.tt.tag_text(tokens, tagonly=True)
+        input_str = '\n'.join(tokens)
+
+        process = subprocess.run("./resources/treetagger/bin/tree-tagger"
+                                 " -token -lemma -sgml -pt-with-lemma "
+                                 "./resources/treetagger/german.par "
+                                 "| sh ./resources/treetagger/cmd/filter-german-tags",
+                                 shell=True, input=input_str,
+                                 text=True, capture_output=True)
+        lines = process.stdout.split("\n")[:-1]
         return {
-            'lemma-treetagger': [x.split("\t")[2] for x in tagged],
-            'pos-treetagger': [x.split("\t")[1] for x in tagged]
+            'lemma-treetagger': [l.split('\t')[2] for l in lines],
+            'pos-treetagger': [l.split('\t')[1] for l in lines]
         }
+
+
 
 class SoMeWeTa(PipelineModule):
 
