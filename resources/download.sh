@@ -59,5 +59,13 @@ $WGET 'http://nlp.stanford.edu/software/stanford-german-corenlp-2018-10-05-model
 $WGET 'https://www.cis.uni-muenchen.de/~schmid/tools/RNNTagger/data/RNNTagger.zip'
 unzip -uo 'RNNTagger.zip'
 
+#
+# ParZu
+#
+git clone https://github.com/rsennrich/ParZu parzu
+cd parzu
+git checkout ed0e71c
+cd ..
+
 
 sha256sum -c sha256sums

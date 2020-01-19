@@ -25,7 +25,7 @@ NLP Pipeline for German literary texts (under development)
 | **Full Pipelines**
 | spacy | `token` | `lemma-spacy`, `pos-spacy`, `syntax-spacy`, `entity-spacy` | Uses convolutional neural network models, trained on TIGER and WikiNER. [Webpage](https://spacy.io/)
 | CoreNLP | `token` | `pos-corenlp`, `syntax-corenlp`, `entities-corenlp`, `sentence-corenlp` | Uses log-linear tagger, transition-based parsing, NER using CRF models. Trained on HGC and UD-HDT. [Webpage](https://stanfordnlp.github.io/CoreNLP/), [(Manning, Surdeanu, Bauer, Finkel, Bethard,  McClosky 2014)](#ref-Manning2013)
-<!-- TODO ParZu -->
+| ParZu<br>(`parzu.Parzu`) | `token`, `sentence`, `pos-*` (Clevertagger recommended), `morphology-*` (Zmorge analysis recommended)| `syntax-parzu` | Hybrid architecture using hand-written rules and statistical disambiguation. Trained on TüBa-D/Z.  [Github](https://github.com/rsennrich/ParZu), [(Sennrich, Volk, Schneider 2013](#ref-SennrichtVolkSchneider2013) |
 
 ## Evaluation
 ## Analysis Tools
@@ -135,9 +135,10 @@ Sennrich, Rico, Martin Volk, and Gerold Schneider. 2013. "Exploiting
 Synergies Between Open Resources for German Dependency Parsing,
 POS-Tagging, and Morphological Analysis." In *Proceedings of the
 International Conference Recent Advances in Natural Language Processing
-RANLP 2013*, 601--9. Hissar, Bulgaria: INCOMA Ltd. Shoumen, BULGARIA.
+RANLP 2013*, 601--9. Hissar, Bulgaria: INCOMA Ltd.
 <https://www.aclweb.org/anthology/R13-1079>.
 
 </div>
+
 
 </div>

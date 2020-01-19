@@ -1,3 +1,10 @@
+import os
+
+# change working directory to script location
+abspath = os.path.abspath(__file__)
+dname = os.path.dirname(abspath)
+os.chdir(dname)
+
 from llppipeline.base import Pipeline
 
 import llppipeline.filereader
@@ -7,6 +14,7 @@ import llppipeline.corenlp
 import llppipeline.spacy
 import llppipeline.morphology
 import llppipeline.marmot
+import llppipeline.parzu
 
 input_file = 'test_file.txt'
 pipeline = Pipeline()
@@ -22,6 +30,7 @@ pipeline.register_module(llppipeline.tagger.Clevertagger(smor_prereq='morphology
 pipeline.register_module(llppipeline.marmot.Marmot())
 pipeline.register_module(llppipeline.morphology.Zmorge())
 pipeline.register_module(llppipeline.morphology.DEMorphy())
+pipeline.register_module(llppipeline.parzu.Parzu(pos_prereq='pos-clevertagger', smor_prereq='morphology-zmorge'))
 
 targets = ['token-syntok', 'sentence-syntok',
            'lemma-spacy', 'pos-spacy', 'syntax-spacy', 'entity-spacy',
@@ -30,6 +39,7 @@ targets = ['token-syntok', 'sentence-syntok',
            'pos-rnntagger', 'morphology-rnntagger', 'lemma-rnntagger',
            'pos-someweta',
            'pos-clevertagger',
+           'syntax-parzu',
            'morphology-marmot', 'pos-marmot',
            'morphology-zmorge',
            'morphology-demorphy',
