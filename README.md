@@ -16,6 +16,7 @@ NLP Pipeline for German literary texts (under development)
 | SoMeWeTa<br>(`tagger.SoMeWeTa`) | `token`, `sentence` (SoMaJo tokenization recommended) | `pos-someweta` | Based on averaged structured perceptron; focuses on web and social media texts. [Github](https://github.com/tsproisl/SoMeWeTa), [(Proisl 2018)](#ref-Proisl2018) |
 | RNNTagger<br>(`tagger.RNNTagger`) | `token`, `sentence` | `pos-rnntagger`, `morphology-rnntagger`, `lemma-rnntagger` | *Requires PyTorch*. Based on LSTMs. [Webpage](https://www.cis.uni-muenchen.de/~schmid/tools/RNNTagger/), [(Schmid 2019)](#ref-Schmid2019) |
 | Clevertagger<br>(`tagger.Clevertagger`) | `token`, `sentence`, `morphology-*` (Zmorge analysis recommended)| `pos-clevertagger` | Uses CRFs. [Github](https://github.com/rsennrich/clevertagger), [(Sennrich, Volk, Schneider 2013](#ref-SennrichtVolkSchneider2013). Uses [Wapiti](https://wapiti.limsi.fr/), [(Lavergne, Cappé, Yvon 2010)](#ref-Lavergne2010) |
+| MarMoT<br>(`marmot.Marmot`) | `token`, `sentence` | `pos-marmot`, `morphology-marmot` | Uses CRFs for POS-tagging and morphological analysis. [Webpage](http://cistern.cis.lmu.de/marmot/), [Github](https://github.com/muelletm/cistern/blob/wiki/marmot.md), [(Müller, Schmid, Hinrich 2013)](#ref-Mueller2013)
 | **Morphological Analyzers and Lemmatizers** |
 | Zmorge<br>(`morphology.Zmorge`) | `token` | `morphology-zmorge`, `lemma-zmorge` | Based on finite-state morphological grammar SMOR. Trained on Wikitionary. [Webpage](https://pub.cl.uzh.ch/users/sennrich/zmorge/), [(Sennrich, Kunz 2014)](#ref-SennrichKunz2014)
 | DEMorphy<br>(`morphology.DEMorphy`) | `token` | `morphology-demorphy` | [Github](https://github.com/DuyguA/DEMorphy/), [(Altinok 2018)](#ref-Altinok2018)
@@ -101,6 +102,16 @@ Meeting of the Association for Computational Linguistics: System
 Demonstrations*, 55–60. Baltimore, Maryland: Association for
 Computational Linguistics.
 <http://www.aclweb.org/anthology/P/P14/P14-5010>.
+
+</div>
+
+<div id="ref-Mueller2013">
+
+Mueller, Thomas, Helmut Schmid, and Hinrich Schütze. 2013. “Efficient
+Higher-Order CRFs for Morphological Tagging.” In *Proceedings of the
+2013 Conference on Empirical Methods in Natural Language Processing*,
+322–32. Seattle, Washington, USA: Association for Computational
+Linguistics. <https://www.aclweb.org/anthology/D13-1032>.
 
 </div>
 
