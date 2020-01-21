@@ -157,6 +157,7 @@ class Clevertagger(PipelineModule):
         for i in range(len(tokens)):
             if sents[i] != sentid:
                 preprocessed += ['']
+                sentid = sents[i]
 
             preprocessed[-1] = preprocessed[-1] + self._create_features(tokens[i], possets[i])
 
@@ -168,7 +169,7 @@ class Clevertagger(PipelineModule):
         }
 
     def _convert_smor(self, smortags):
-        posset = []
+        posset = set()
         for line in smortags:
             try:
                 raw_pos = self.re_mainclass.search(line).group(1)
@@ -178,14 +179,20 @@ class Clevertagger(PipelineModule):
             pos, pos2 = get_true_pos(raw_pos, line)
 
             if pos:
-                posset.append(pos)
+                posset.add(pos)
             if pos2:
-                posset.append(pos2)
+                posset.add(pos2)
 
         return posset
 
     def _create_features(self, word, posset):
         """Create list of features for each word"""
+
+        # [punctuation is handled incorrectly]
+        if word in ['(',')','{','}','"',"'",u'”',u'“','[',']','«','»','-','‒','–','‘','’','/','...','--']:
+            posset = ['$(']
+        if word in ['.',':',';','!','?']:
+            posset = ['$.']
 
         pos = []
 
