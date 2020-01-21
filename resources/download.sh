@@ -67,5 +67,14 @@ cd parzu
 git checkout ed0e71c
 cd ..
 
+#
+# Wapiti for clevertagger
+#
+git clone https://github.com/Jekub/Wapiti wapiti
+cd wapiti
+git checkout v1.5.0
+make wapiti
+cd ..
+
 
 sha256sum -c sha256sums

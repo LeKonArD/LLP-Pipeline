@@ -125,7 +125,7 @@ class Clevertagger(PipelineModule):
     def __init__(self, smor_prereq):
         self.smor_prereq = smor_prereq
         self.crf_model = './resources/hdt_ab.zmorge-20140521-smor_newlemma.model'
-        self.crf_backend_exec = './resources/wapiti'
+        self.crf_backend_exec = './resources/wapiti/wapiti'
 
         self.alphnum = re.compile(r'^(?:\w|\d|-)+$', re.U)
         self.re_mainclass = re.compile(u'<\+(.*?)>')
