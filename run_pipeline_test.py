@@ -1,3 +1,4 @@
+import sys
 import os
 
 # change working directory to script location
@@ -16,10 +17,9 @@ import llppipeline.morphology
 import llppipeline.marmot
 import llppipeline.parzu
 
-input_file = 'test_file.txt'
 pipeline = Pipeline()
 
-pipeline.register_module(llppipeline.filereader.PlainReader(input_file))
+pipeline.register_module(llppipeline.filereader.PlainReader(sys.stdin))
 pipeline.register_module(llppipeline.tokenizer.Syntok())
 pipeline.register_module(llppipeline.corenlp.CoreNLP())
 pipeline.register_module(llppipeline.spacy.Spacy())

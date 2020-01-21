@@ -15,11 +15,10 @@ class PlainReader(PipelineModule):
         return {}
 
     def make(self, prerequisite_data):
-        with open(self.input_file) as f:
-            raw_text = f.read()
-            paras = re.split(self.para_separator, raw_text)
+        raw_text = self.input_file.read()
+        paras = re.split(self.para_separator, raw_text)
 
-            return {'paragraph': paras}
+        return {'paragraph': paras}
 
 class TEIReader(PipelineModule):
 
