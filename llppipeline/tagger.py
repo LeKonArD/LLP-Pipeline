@@ -107,16 +107,41 @@ class RNNTagger(PipelineModule):
 
             if re.match('^\\$.*', fields[1]):
                 pos += [fields[1]]
-                morph += "_"
+                morph += [{}]
             else:
                 pos += [split[0]]
                 if len(split) > 1:
-                    morph += [split[1]]
+                    morph += [self._convert_morph(split[1])]
                 else:
-                    morph += ["_"]
+                    morph += [{}]
             lemma += [fields[2]]
 
         return {'pos-rnntagger': pos, 'morphology-rnntagger': morph, 'lemma-rnntagger': lemma}
+
+    def _convert_morph(self, morphstr):
+        ret = {}
+
+        genus = list(filter(lambda x: x in morphstr, ["Masc", "Fem", "Neut"]))
+        if len(genus) > 0:
+            ret['gender'] = genus[0].lower()
+        casus = list(filter(lambda x: x in morphstr, ["Nom", "Gen", "Dat", "Acc"]))
+        if len(casus) > 0:
+            ret['case'] = casus[0].lower()
+        numerus = list(filter(lambda x: x in morphstr, ["Sg", "Pl"]))
+        if len(numerus) > 0:
+            ret['number'] = numerus[0].lower()
+        degree = list(filter(lambda x: x in morphstr, ["Pos", "Comp", "Sup"]))
+        if len(degree) > 0:
+            ret['degree'] = degree[0].lower()
+        person = list(filter(lambda x: x in morphstr, ["1", "2", "3"]))
+        if len(person) > 0:
+            ret['person'] = person[0].lower()
+        mood = list(filter(lambda x: x in morphstr, ["Ind", "Subj"]))
+        if len(mood) > 0:
+            ret['mood'] = mood[0].lower()
+
+        return ret
+
 
 
 # code cited from Rico Sennrich et al.: clevertagger (https://github.com/rsennrich/clevertagger)

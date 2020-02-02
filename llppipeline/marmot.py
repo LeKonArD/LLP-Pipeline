@@ -50,9 +50,9 @@ class Marmot(PipelineModule):
                     pos += ['_']
 
                 if len(fields) >= 8:
-                    morph += [fields[7].strip()]
+                    morph += [self._convert_morph(fields[7].strip())]
                 else:
-                    morph += ['_']
+                    morph += [{}]
 
                 line = f.readline()
 
@@ -60,3 +60,13 @@ class Marmot(PipelineModule):
             'morphology-marmot': morph,
             'pos-marmot': pos
         }
+
+    def _convert_morph(self, morphstr):
+        ret = {}
+
+        for s in morphstr.split("|"):
+            t = s.split("=")
+            if len(t) == 2:
+                ret[t[0]] = t[1]
+
+        return ret
