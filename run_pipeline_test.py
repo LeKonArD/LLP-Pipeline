@@ -34,7 +34,7 @@ pipeline.register_module(llppipeline.parzu.Parzu(pos_prereq='pos-clevertagger', 
 
 targets = ['token-syntok', 'sentence-syntok',
            'lemma-spacy', 'pos-spacy', 'syntax-spacy', 'entity-spacy',
-           'pos-corenlp', 'syntax-corenlp', 'entities-corenlp', 'sentence-corenlp',
+           'pos-corenlp', 'syntax-corenlp', 'entities-corenlp',
            'lemma-treetagger', 'pos-treetagger',
            'pos-rnntagger', 'morphology-rnntagger', 'lemma-rnntagger',
            'pos-someweta',

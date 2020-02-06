@@ -16,7 +16,7 @@ class Spacy(PipelineModule):
     def make(self, prerequisite_data):
         tokens = prerequisite_data['token']
         data = Sentence(tokens)
-        self.tagger.predict(data)
+        self.tagger.predict(data, verbose=True)
 
         return {
             'pos-flair': [x.get_tag("pos").value for x in data],

@@ -27,7 +27,8 @@ class Parzu(PipelineModule):
         self.prolog_preprocess = pexpect.spawn('swipl',
                                                ['-q', '-s', 'resources/parzu/preprocessor/preprocessing.pl'],
                                                echo=False,
-                                               logfile=sys.stderr,
+                                               #logfile=sys.stderr,
+                                               timeout=None,
                                                encoding='utf-8')
 
         self.prolog_preprocess.expect_exact('?- ')
@@ -37,8 +38,9 @@ class Parzu(PipelineModule):
         self.prolog_parser = pexpect.spawn('swipl',
                                            ['-q', '-s', 'ParZu-parser.pl', '-G248M', '-L248M'],
                                            echo=False,
-                                           logfile=sys.stderr,
+                                           #logfile=sys.stderr,
                                            encoding='utf-8',
+                                           timeout=None,
                                            cwd='resources/parzu/core')
 
         self.prolog_parser.expect_exact('?- ')

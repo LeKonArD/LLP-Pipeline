@@ -1,4 +1,4 @@
-from llppipeline.base import PipelineModule
+from llppipeline.base import PipelineModule, ProgressBar
 
 from someweta import ASPTagger
 import os
@@ -19,18 +19,33 @@ class TreeTagger(PipelineModule):
 
     def make(self, prerequisite_data):
         tokens = prerequisite_data['token']
-        input_str = '\n'.join(tokens)
 
-        process = subprocess.run("./resources/treetagger/bin/tree-tagger"
+        if not os.path.exists("temp"):
+            os.mkdir("temp")
+
+        with open("temp/treetagger_input", 'w') as f:
+            for t in tokens:
+                f.write(t + '\n')
+
+        process = subprocess.Popen("cat temp/treetagger_input | ./resources/treetagger/bin/tree-tagger"
                                  " -token -lemma -sgml -pt-with-lemma "
                                  "./resources/treetagger/german.par "
                                  "| sh ./resources/treetagger/cmd/filter-german-tags",
-                                 shell=True, input=input_str,
-                                 text=True, capture_output=True)
-        lines = process.stdout.split("\n")[:-1]
+                                 shell=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
+
+        bar = ProgressBar('TreeTagger', max=len(prerequisite_data['token']))
+        lemmas = []
+        pos = []
+        for line in process.stdout:
+            fields = line.strip().split('\t')
+            lemmas += [fields[2]]
+            pos += [fields[1]]
+            bar.next()
+        bar.finish()
+
         return {
-            'lemma-treetagger': [l.split('\t')[2] for l in lines],
-            'pos-treetagger': [l.split('\t')[1] for l in lines]
+            'lemma-treetagger': lemmas,
+            'pos-treetagger': pos
         }
 
 
@@ -53,6 +68,7 @@ class SoMeWeTa(PipelineModule):
 
         sent_end = 0
         tagged_sentences = []
+        bar = ProgressBar("SoMeWeTa", max=len(sentences))
 
         while sent_end < len(sentences):
             sent_start = sent_end
@@ -61,6 +77,8 @@ class SoMeWeTa(PipelineModule):
                 sent_end += 1
 
             tagged_sentences += [self.asptagger.tag_sentence(tokens[sent_start:sent_end])]
+            bar.goto(sent_end)
+        bar.finish()
 
         return {
             'pos-someweta': [t[1] for sent in tagged_sentences for t in sent]
@@ -91,17 +109,20 @@ class RNNTagger(PipelineModule):
                 sent = s
             f.write('\n')
 
-        process = subprocess.run("sh ./resources/rnn-tagger-german.sh temp/rnntagger_input %s" % sys.executable,
+        # Stage 1: Tagging
+        proc = subprocess.Popen("sh ./resources/rnn-tagger-german.sh tag temp/rnntagger_input %s | tee temp/rnntagger_tagged " % sys.executable,
                        shell=True, text=True, stdout=subprocess.PIPE)
+        bar = ProgressBar('RNNTagger-Tagger', max=len(prerequisite_data['token']))
+        bar.sma_window = 1000
 
-        lines = process.stdout.split("\n")
         pos = []
         morph = []
-        lemma = []
-        for line in lines:
+        for line in proc.stdout:
+            line = line.strip()
             if line == "":
                 continue
 
+            bar.next()
             fields = line.split("\t")
             split = re.split("\\.", fields[1], maxsplit=1)
 
@@ -114,7 +135,25 @@ class RNNTagger(PipelineModule):
                     morph += [self._convert_morph(split[1])]
                 else:
                     morph += [{}]
-            lemma += [fields[2]]
+
+        bar.finish()
+
+        # Stage 2: Lemmatization
+        proc = subprocess.Popen("sh ./resources/rnn-tagger-german.sh lemmatize temp/rnntagger_tagged %s" % sys.executable,
+                                shell=True, text=True, stdout=subprocess.PIPE)
+        bar = ProgressBar('RNNTagger-Lemmatizer', max=len(prerequisite_data['token']))
+        bar.sma_window = 1000
+
+        lemma = []
+        for line in proc.stdout:
+            line = line.strip()
+            if line == "":
+                continue
+
+            bar.next()
+            lemma += [line.strip()]
+
+        bar.finish()
 
         return {'pos-rnntagger': pos, 'morphology-rnntagger': morph, 'lemma-rnntagger': lemma}
 
@@ -243,7 +282,7 @@ class Clevertagger(PipelineModule):
 
     def _process_by_sentence(self, processor, preprocessed):
         sentences_out = []
-        for sentence in preprocessed:
+        for sentence in ProgressBar("Clevertagger").iter(preprocessed):
             if not sentence:
                 continue
             words = []

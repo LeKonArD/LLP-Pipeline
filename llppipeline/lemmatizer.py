@@ -1,4 +1,4 @@
-from llppipeline.base import PipelineModule
+from llppipeline.base import PipelineModule, ProgressBar
 from germalemma import GermaLemma
 import sys
 import re
@@ -22,18 +22,19 @@ class GermaLemma(PipelineModule):
         pattern1 = re.compile("^[NV]")
         pattern2 = re.compile("^(ADJ|ADV)")
 
-        def lemmatize_token(t, postag):
+        lemmas = []
+        for (token, postag) in ProgressBar('GermaLemma', max=len(prerequisite_data['token'])).iter(zip(tokens, pos)):
             try:
                 if pattern1.match(postag):
-                    return self.lemmatizer.find_lemma(t, postag)
+                    lemmas += [self.lemmatizer.find_lemma(token, postag)]
                 elif pattern2.match(postag):
-                    return self.lemmatizer.find_lemma(t, postag[:3])
+                    lemmas += [self.lemmatizer.find_lemma(token, postag[:3])]
                 else:
-                    return 0
+                    lemmas += ['_']
             except Exception as e:
-                sys.stderr.write(f"Lemmatizing {t} ({postag}) raised exception: {e}\n")
-                return 0
+                sys.stderr.write(f"Lemmatizing {token} ({postag}) raised exception: {e}\n")
+                lemmas += ['_']
 
         return {
-            'lemma-germalemma': list(map(lambda x: lemmatize_token(x[0], x[1]), zip(tokens, pos)))
+            'lemma-germalemma': lemmas
         }

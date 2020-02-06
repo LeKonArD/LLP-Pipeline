@@ -1,6 +1,11 @@
 import igraph
 import sys
+from progress.bar import IncrementalBar
 
+try:
+    from time import monotonic
+except ImportError:
+    from time import time as monotonic
 
 class Pipeline:
 
@@ -9,7 +14,7 @@ class Pipeline:
         self.targets = set()
 
     def register_module(self, module):
-        print("Loading module %s" % module, file=sys.stderr)
+        print("Loaded %s" % module, file=sys.stderr)
         self.modules.append(module)
         self.targets = self.targets.union(module.prerequisites())
         self.targets = self.targets.union(module.targets())
@@ -78,3 +83,44 @@ class PipelineModule:
 
     def make(self, prerequisite_data):
         raise NotImplementedError
+
+
+class StaticModule(PipelineModule):
+
+    def __init__(self, **targets):
+        self.targets = targets
+
+    def targets(self):
+        return self.targets.keys()
+
+    def prerequisites(self):
+        return set()
+
+    def make(self, prerequisite_data):
+        return self.targets
+
+
+class ProgressBar(IncrementalBar):
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.suffix = '[%(index)d/%(max)d | %(rate).2e/s | %(eta_td)s]'
+        self.lastupdate = None
+        self.sma_window = 100
+
+    def update_avg(self, n, dt):
+        if self.index != 0:
+            self.avg = self.elapsed / self.index
+
+    @property
+    def rate(self):
+        if self.avg == 0:
+            return 0
+        else:
+            return 1/self.avg
+
+    def update(self):
+        now = monotonic()
+        if self.lastupdate is None or now - self.lastupdate > .1:
+            self.lastupdate = now
+            super().update()

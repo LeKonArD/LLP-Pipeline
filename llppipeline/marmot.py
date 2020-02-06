@@ -1,7 +1,7 @@
 import subprocess
 import os
 
-from llppipeline.base import PipelineModule
+from llppipeline.base import PipelineModule, ProgressBar
 
 class Marmot(PipelineModule):
 
@@ -31,12 +31,14 @@ class Marmot(PipelineModule):
                 f.write(tok + '\n')
                 sent = s
 
-        subprocess.run("java -cp %s marmot.morph.cmd.Annotator --model-file %s --test-file form-index=0,temp/marmot_input --pred-file temp/marmot_output" % (self.jarfile, self.modelfile),
-                                    shell=True)
+        proc = subprocess.Popen("java -cp %s marmot.morph.cmd.Annotator --model-file %s --test-file form-index=0,temp/marmot_input --pred-file /dev/stdout" % (self.jarfile, self.modelfile),
+                                    shell=True, stdout=subprocess.PIPE, stdin=subprocess.PIPE, text=True)
+
+        bar = ProgressBar('Marmot', max=len(prerequisite_data['token']))
 
         morph = []
         pos = []
-        with open("./temp/marmot_output", 'r') as f:
+        with proc.stdout as f:
             line = f.readline()
             while line:
                 if not line.strip():
@@ -54,7 +56,10 @@ class Marmot(PipelineModule):
                 else:
                     morph += [{}]
 
+                bar.next()
+
                 line = f.readline()
+        bar.finish()
 
         return {
             'morphology-marmot': morph,

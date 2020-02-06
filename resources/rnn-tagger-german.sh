@@ -1,10 +1,11 @@
 #!/bin/sh
 
-INPUT=$(realpath $1)
+INPUT=$(realpath $2)
+TASK=$1
 
 cd "$(dirname "$0")/RNNTagger"
 
-PYTHON=${2:-python}
+PYTHON=${3:-python}
 BIN=./bin
 SCRIPTS=./scripts
 LIB=./lib
@@ -21,8 +22,12 @@ REFORMAT=${SCRIPTS}/reformat.pl
 LEMMATIZER=$PyNMT/nmt-translate.py
 NMTPAR=${LIB}/PyNMT/${LANGUAGE}
 
-# $TOKENIZER -g -a $ABBR_LIST $INPUT > $TMP.tok
-$PYTHON $TAGGER $RNNPAR $INPUT > $TMP.tagged
-$REFORMAT $TMP.tagged > $TMP.reformatted
-$PYTHON $LEMMATIZER --print_source $NMTPAR $TMP.reformatted > $TMP.lemmas
-$SCRIPTS/lemma-lookup.pl $TMP.lemmas $TMP.tagged 
+if [ $TASK = 'tag' ]; then
+  $PYTHON $TAGGER $RNNPAR $INPUT 2>/dev/null
+fi
+
+if [ $TASK = 'lemmatize' ]; then
+  sed '/^$/d;s/\(.\)/\1 /g;s/   / <> /g;s/\t/ ## /g;' $INPUT \
+    | $PYTHON $LEMMATIZER --print_source $NMTPAR /dev/stdin 2>/dev/null \
+    | sed '/##/d;/^$/d;s/ //g;s/<>/ /g'
+fi

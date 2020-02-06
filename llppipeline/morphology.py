@@ -1,4 +1,4 @@
-from llppipeline.base import PipelineModule
+from llppipeline.base import PipelineModule, ProgressBar
 import re
 import subprocess
 import demorphy
@@ -24,6 +24,7 @@ class Zmorge(PipelineModule):
         pat = re.compile("^> ")
         negative = re.compile("^no result for")
 
+        bar = ProgressBar('Zmorge', max=len(prerequisite_data['token']))
         infls = []
         morph_output = []
         it = iter(lines)
@@ -37,9 +38,13 @@ class Zmorge(PipelineModule):
 
                 morph_output += [infls]
                 infls = []
+
+                bar.next()
             except StopIteration:
                 morph_output += [infls]
                 break
+
+        bar.finish()
 
 
         return {'morphology-zmorge': morph_output[1:]}
@@ -56,7 +61,10 @@ class DEMorphy(PipelineModule):
         tokens = prerequisite_data['token']
         analyzer = demorphy.Analyzer(char_subs_allowed=True)
 
-        morph_output = list(map(lambda tok: list(analyzer.analyze(tok)), tokens))
+        morph_output = []
+
+        for token in ProgressBar('DEMorphy', max=len(prerequisite_data['token'])).iter(tokens):
+            morph_output += [analyzer.analyze(token)]
 
         return {'morphology-demorphy': morph_output}
 

@@ -11,6 +11,7 @@ class Spacy(PipelineModule):
         return {'token'}
 
     def make(self, prerequisite_data):
+        spacy.prefer_gpu()
         nlp = spacy.load("de_core_news_sm")
 
         nlp.tokenizer = lambda x: Doc(nlp.vocab, words=prerequisite_data['token'])
