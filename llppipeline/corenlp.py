@@ -9,7 +9,7 @@ class CoreNLP(PipelineModule):
     def __init__(self, classpath='resources/stanford-corenlp-full-2018-10-05/*'):
         self.proc = pexpect.spawn('/bin/sh', echo=False, timeout=None, encoding='utf-8')
         self.proc.sendline('stty -icanon')
-        self.proc.logfile = sys.stderr
+        #self.proc.logfile = sys.stderr
         self.proc.sendline('java '
                            '-cp "%s" '
                            'edu.stanford.nlp.pipeline.StanfordCoreNLP '

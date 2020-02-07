@@ -1,5 +1,7 @@
+import llppipeline.util.config as config
 import igraph
 import sys
+import os
 from progress.bar import IncrementalBar
 
 try:
@@ -108,6 +110,10 @@ class ProgressBar(IncrementalBar):
         self.lastupdate = None
         self.sma_window = 100
 
+        if not config.args.progress:
+            self.file = open(os.devnull, 'w')
+
+
     def update_avg(self, n, dt):
         if self.index != 0:
             self.avg = self.elapsed / self.index
@@ -120,6 +126,9 @@ class ProgressBar(IncrementalBar):
             return 1/self.avg
 
     def update(self):
+        if not config.args.progress:
+            return
+
         now = monotonic()
         if self.lastupdate is None or now - self.lastupdate > .1:
             self.lastupdate = now
