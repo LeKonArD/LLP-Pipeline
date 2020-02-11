@@ -46,6 +46,10 @@ NLP Pipeline for German literary texts (under development)
 git clone https://github.com/LeKonArD/LLP-Pipeline
 cd LLP-Pipeline
 
+# install dependencies
+pip install --user -r requirements.txt
+# TODO dawg, demorphy
+
 # download resources
 cd resources
 ./download.sh

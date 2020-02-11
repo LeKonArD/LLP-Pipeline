@@ -68,8 +68,11 @@ git checkout ed0e71c
 cd ..
 
 #
-# Wapiti for clevertagger
+# clevertagger
 #
+$WGET 'https://pub.cl.uzh.ch/users/sennrich/zmorge/models/hdt_ab.zmorge-20140521-smor_newlemma.model.zip'
+unzip hdt_ab.zmorge-20140521-smor_newlemma.model.zip
+
 git clone https://github.com/Jekub/Wapiti wapiti
 cd wapiti
 git checkout v1.5.0
