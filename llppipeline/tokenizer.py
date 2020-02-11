@@ -43,8 +43,11 @@ class Syntok(PipelineModule):
         for para in paragraphs:
             sentences = [sent for p in syntok.segmenter.process(para) for sent in p]
             for s in sentences:
-                tokens += [token.value for token in s]
-                sentence_alignment += [sent_num] * len(s)
-                sent_num = sent_num + 1
+                for token in s:
+                    if token.value == '':
+                        continue
+                    tokens += [token.value]
+                    sentence_alignment += [sent_num]
+            sent_num = sent_num + 1
 
         return {'token-syntok': tokens, 'sentence-syntok': sentence_alignment, 'token': tokens, 'sentence': sentence_alignment}

@@ -6,6 +6,7 @@ import subprocess
 import pexpect
 import sys
 import re
+import tempfile
 
 from .util.smor_getpos import get_true_pos
 
@@ -23,14 +24,15 @@ class TreeTagger(PipelineModule):
         if not os.path.exists("temp"):
             os.mkdir("temp")
 
-        with open("temp/treetagger_input", 'w') as f:
+        inputfile = tempfile.NamedTemporaryFile(prefix="treetagger_input", delete=False, dir="temp", mode="wt")
+        with inputfile:
             for t in tokens:
-                f.write(t + '\n')
+                inputfile.write(t + '\n')
 
-        process = subprocess.Popen("cat temp/treetagger_input | ./resources/treetagger/bin/tree-tagger"
+        process = subprocess.Popen("cat %s | ./resources/treetagger/bin/tree-tagger"
                                  " -token -lemma -sgml -pt-with-lemma "
                                  "./resources/treetagger/german.par "
-                                 "| sh ./resources/treetagger/cmd/filter-german-tags",
+                                 "| sh ./resources/treetagger/cmd/filter-german-tags" % inputfile.name,
                                  shell=True, text=True, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL)
 
         bar = ProgressBar('TreeTagger', max=len(prerequisite_data['token']))
@@ -42,6 +44,8 @@ class TreeTagger(PipelineModule):
             pos += [fields[1]]
             bar.next()
         bar.finish()
+
+        os.remove(inputfile.name)
 
         return {
             'lemma-treetagger': lemmas,
@@ -99,18 +103,21 @@ class RNNTagger(PipelineModule):
         if not os.path.exists("temp"):
             os.mkdir("temp")
 
-        with open("temp/rnntagger_input", 'w') as f:
+        inputfile = tempfile.NamedTemporaryFile(prefix="rnntagger_input", delete=False, dir="temp", mode="wt")
+        tag_file = tempfile.NamedTemporaryFile(prefix="rnntagger_tagged", delete=False, dir="temp")
+        tag_file.close()
+        with inputfile:
             sent = sentences[0]
             for tok, s in zip(tokens, sentences):
                 if s != sent:
-                    f.write('\n')
+                    inputfile.write('\n')
 
-                f.write(tok + '\n')
+                inputfile.write(tok + '\n')
                 sent = s
-            f.write('\n')
+            inputfile.write('\n')
 
         # Stage 1: Tagging
-        proc = subprocess.Popen("sh ./resources/rnn-tagger-german.sh tag temp/rnntagger_input %s | tee temp/rnntagger_tagged " % sys.executable,
+        proc = subprocess.Popen("sh ./resources/rnn-tagger-german.sh tag %s %s | tee %s " % (inputfile.name, sys.executable, tag_file.name),
                        shell=True, text=True, stdout=subprocess.PIPE)
         bar = ProgressBar('RNNTagger-Tagger', max=len(prerequisite_data['token']))
         bar.sma_window = 1000
@@ -139,7 +146,7 @@ class RNNTagger(PipelineModule):
         bar.finish()
 
         # Stage 2: Lemmatization
-        proc = subprocess.Popen("sh ./resources/rnn-tagger-german.sh lemmatize temp/rnntagger_tagged %s" % sys.executable,
+        proc = subprocess.Popen("sh ./resources/rnn-tagger-german.sh lemmatize %s %s" % (tag_file.name, sys.executable),
                                 shell=True, text=True, stdout=subprocess.PIPE)
         bar = ProgressBar('RNNTagger-Lemmatizer', max=len(prerequisite_data['token']))
         bar.sma_window = 1000
@@ -154,6 +161,8 @@ class RNNTagger(PipelineModule):
             lemma += [line.strip()]
 
         bar.finish()
+        os.remove(inputfile.name)
+        os.remove(tag_file.name)
 
         return {'pos-rnntagger': pos, 'morphology-rnntagger': morph, 'lemma-rnntagger': lemma}
 

@@ -1,5 +1,6 @@
 import subprocess
 import os
+import tempfile
 
 from llppipeline.base import PipelineModule, ProgressBar
 
@@ -22,16 +23,17 @@ class Marmot(PipelineModule):
         if not os.path.exists("temp"):
             os.mkdir("temp")
 
-        with open("temp/marmot_input", 'w') as f:
-            sent = sentences[0]
+        inputfile = tempfile.NamedTemporaryFile(prefix="marmot_input", delete=False, dir="temp", mode="wt")
+        sent = sentences[0]
+        with inputfile:
             for tok, s in zip(tokens, sentences):
                 if s != sent:
-                    f.write('\n')
+                    inputfile.write('\n')
 
-                f.write(tok + '\n')
+                inputfile.write(tok + '\n')
                 sent = s
 
-        proc = subprocess.Popen("java -cp %s marmot.morph.cmd.Annotator --model-file %s --test-file form-index=0,temp/marmot_input --pred-file /dev/stdout" % (self.jarfile, self.modelfile),
+        proc = subprocess.Popen("java -cp %s marmot.morph.cmd.Annotator --model-file %s --test-file form-index=0,%s --pred-file /dev/stdout" % (self.jarfile, self.modelfile, inputfile.name),
                                     shell=True, stdout=subprocess.PIPE, stdin=subprocess.PIPE, text=True)
 
         bar = ProgressBar('Marmot', max=len(prerequisite_data['token']))
@@ -60,6 +62,8 @@ class Marmot(PipelineModule):
 
                 line = f.readline()
         bar.finish()
+
+        os.remove(inputfile.name)
 
         return {
             'morphology-marmot': morph,

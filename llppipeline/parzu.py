@@ -3,6 +3,7 @@ import os
 import pexpect
 import codecs
 import re
+import tempfile
 
 from llppipeline.base import PipelineModule
 from resources.parzu.preprocessor.treetagger2prolog import format_conversion
@@ -16,13 +17,6 @@ class Parzu(PipelineModule):
         self.pos_prereq = pos_prereq
         self.smor_prereq = smor_prereq
 
-    def targets(self):
-        return {'syntax-parzu'}
-
-    def prerequisites(self):
-        return {'token', 'sentence', self.pos_prereq, self.smor_prereq}
-
-    def make(self, prerequisite_data):
         # launch morphological preprocessing (prolog script)
         self.prolog_preprocess = pexpect.spawn('swipl',
                                                ['-q', '-s', 'resources/parzu/preprocessor/preprocessing.pl'],
@@ -64,6 +58,14 @@ class Parzu(PipelineModule):
         self.prolog_parser.sendline(parser_init)
         self.prolog_parser.expect('.*\?- ')
 
+
+    def targets(self):
+        return {'syntax-parzu'}
+
+    def prerequisites(self):
+        return {'token', 'sentence', self.pos_prereq, self.smor_prereq}
+
+    def make(self, prerequisite_data):
         tokens = prerequisite_data['token']
         analyses = []
         for token,analysis in zip(tokens, prerequisite_data[self.smor_prereq]):
@@ -82,10 +84,10 @@ class Parzu(PipelineModule):
             sentence = '\n'.join([token+'\t'+pos for token,pos in zip(tokens[sent_start:sent_end], prerequisite_data[self.pos_prereq][sent_start:sent_end])])
             sentences.append(sentence)
 
-        self.preprocess(sentences, analyses)
-        self.parse()
+        preprocessed_file = self.preprocess(sentences, analyses)
+        outfile = self.parse(preprocessed_file)
 
-        output = list(cleanup_conll(codecs.open('./temp/ParZu-parsed.pl', encoding='UTF-8')))
+        output = list(cleanup_conll(codecs.open(outfile.name, encoding='UTF-8')))
 
         syntax = []
         for sent in output:
@@ -103,6 +105,9 @@ class Parzu(PipelineModule):
                     head = int(line.split('\t')[6]) - tokenidx
 
                 syntax.append((rel, head))
+
+        os.remove(preprocessed_file.name)
+        os.remove(outfile.name)
 
         return {
             'syntax-parzu': syntax
@@ -134,8 +139,14 @@ class Parzu(PipelineModule):
         analyses.append('gertwol(\'<unknown>\',\'<unknown>\',_,_,_).')
 
         # communication with swipl scripts is via temporary files
-        codecs.open('./temp/ParZu-morph.pl', 'w', encoding='UTF-8').write('\n'.join(analyses))
-        codecs.open('./temp/ParZu-tag.pl', 'w', encoding='UTF-8').write('\n'.join(sentences_out))
+        preprocessed_file = tempfile.NamedTemporaryFile(prefix="ParZu-preprocessed.pl", delete=False, dir="temp")
+        morph_file = tempfile.NamedTemporaryFile(prefix="ParZu-morph.pl", delete=False, dir="temp")
+        tag_file = tempfile.NamedTemporaryFile(prefix="ParZu-tag.pl", delete=False, dir="temp")
+        preprocessed_file.close()
+        morph_file.close()
+        tag_file.close()
+        codecs.open(morph_file.name, 'w', encoding='UTF-8').write('\n'.join(analyses))
+        codecs.open(tag_file.name, 'w', encoding='UTF-8').write('\n'.join(sentences_out))
 
         # start preprocessing script and wait for it to finish
         self.prolog_preprocess.sendline(
@@ -146,7 +157,7 @@ class Parzu(PipelineModule):
             "assert(morphology(smor)),"
             "retract(sentdelim(_)),"
             "assert(sentdelim('$newline')),"
-            "start('./temp/ParZu-morph.pl','./temp/ParZu-tag.pl','./temp/ParZu-preprocessed.pl').")
+            "start('"+morph_file.name+"','"+tag_file.name+"','"+preprocessed_file.name+"').")
 
         while True:
             line = self.prolog_preprocess.readline()
@@ -154,12 +165,18 @@ class Parzu(PipelineModule):
             if re.match('(\?-\s)?true\.\r\n', line):
                 break
 
+        os.remove(morph_file.name)
+        os.remove(tag_file.name)
+        return preprocessed_file
+
     #main parsing step
-    def parse(self):
+    def parse(self, preprocessed_file):
+        parsed_file = tempfile.NamedTemporaryFile(prefix="ParZu-parsed.pl", delete=False, dir="temp")
+        parsed_file.close()
 
         cmd = "retract(outputformat(_))," \
               + "assert(outputformat(conll))," \
-              + "go_textual('"+os.path.abspath('./temp/ParZu-preprocessed.pl')+"', '"+os.path.abspath('./temp/ParZu-parsed.pl')+"').\n"
+              + "go_textual('"+os.path.abspath(preprocessed_file.name)+"', '"+os.path.abspath(parsed_file.name)+"').\n"
 
         self.prolog_parser.sendline(cmd)
 
@@ -168,3 +185,5 @@ class Parzu(PipelineModule):
             line = re.sub(r'\x1B\[[0-?]*[ -/]*[@-~]', '', line)     # remove styling tokens
             if re.match('(\?-)?(\s+\|\s+)?true\.\r\n', line):
                 break
+
+        return parsed_file
