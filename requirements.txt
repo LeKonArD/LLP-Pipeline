@@ -3,7 +3,7 @@ germalemma==0.1.3
 SoMaJo==2.0.1
 SoMeWeTa==1.7.1
 spacy==2.2.3
-lxml==4.4.2
+lxml==4.6.2
 pandas==0.25.3
 flair==0.4.4
 syntok==1.2.2
